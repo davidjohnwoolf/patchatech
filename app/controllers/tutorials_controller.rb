@@ -1,5 +1,5 @@
 class TutorialsController < ApplicationController
-  before_action :find_tutorial only: [:update, :edit, :destroy, :show]
+  before_action :find_tutorial, only: [:update, :edit, :destroy, :show]
 
     def index
       @tutorials = Tutorial.all
