@@ -38,3 +38,14 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+group :test do
+  gem 'shoulda-matchers'
+  gem 'database_cleaner'
+end
+
+group :development, :test do
+  gem 'ffaker'
+  gem 'rspec-rails'
+  gem 'pry-rails'
+  gem 'factory_girl_rails'
+end
