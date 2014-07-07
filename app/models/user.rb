@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :confirmable, :validatable
 
-  validates :first_name, :last_name, :email, :password, presence: true
+  validates :email, :password, presence: true
 
   has_many :tutorials
 
