@@ -9,16 +9,16 @@
 <body>
   <nav>
     <% if signed_in? %>
-      <a href="<%= root_path %>">Home</a>
-      <a href="<%= tutorials_path %>">Tutorials</a>
-      <a href="<%= new_tutorial_path %>">New Tutorial</a>
-      <a href="<%= edit_user_registration_path %>">Edit Account</a>
-      <a href="<%= destroy_user_session_path %>">Sign Out</a>
+      <%= link_to 'Home', root_path %>
+      <%= link_to 'Tutorials', tutorials_path %>
+      <%= link_to 'New Tutorial', new_tutorial_path %>
+      <%= link_to 'Edit Account', edit_user_registration_path %>
+      <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
     <% else %>
-      <a href="<%= root_path %>">Home</a>
-      <a href="<%= tutorials_path %>">Tutorials</a>
-      <a href="<%= new_user_registration_path %>">Sign Up</a>
-      <a href="<%= new_user_session_path %>">Sign In</a>
+      <%= link_to 'Home', root_path %>
+      <%= link_to 'Tutorials', tutorials_path %>
+      <%= link_to 'Sign Up', new_user_registration_path %>
+      <%= link_to 'Sign In', new_user_session_path %>
     <% end %>
   </nav>
 
