@@ -4,20 +4,21 @@ RSpec.describe TutorialsController, :type => :controller do
 
   describe '#index' do
     before do
-      @tutorials = create_list(:tutorial, 3)
+      @user = create(:user)
+      @tutorials = create_list(:tutorial, 3, user: @user)
     end
     it 'displays a collection of tutorials' do
       get :index
       expect(response).to be_success
-      expect(assigns(:tutorials).count).to eq 3 #grab an instance variable named tutorials and the value of that
-      expect(response).to render_template('index') #make sure its rendering the right template that being index instead of say rendering the new tempate on the index page
-                                               #if you go to render a new template and it fails to create it will go to the create page and load the new template causeing an error even thoug hits not necessarily the template
+      expect(assigns(:tutorials).count).to eq 3
+      expect(response).to render_template('index')
     end
   end
 
   describe '#show' do
     before do
-      @tutorial = create(:tutorial, title: 'Video1')
+      @user = create(:user)
+      @tutorial = create(:tutorial, title: 'Video1', user: @user)
     end
     it 'displays a single tutorial' do
       get :show, id: @tutorial.id
@@ -40,8 +41,8 @@ RSpec.describe TutorialsController, :type => :controller do
       context 'when saving a proper record' do
         it 'creates a new tutorial and saves it to the db' do
           expect {
-          post :create, tutorial: {title: 'a new tutorial'}
-        }.to change(Tutorial, :count).by(1) #checks the count of tutorials before and after and compares after to see if it changed by 1
+          post :create, tutorial: { user_id: 2, title: 'a new tutorial', description: 'a tech video', category: 'apple' }
+        }.to change(Tutorial, :count).by(1)
 
         end
       end
@@ -56,7 +57,8 @@ RSpec.describe TutorialsController, :type => :controller do
 
   describe '#edit' do
     before do
-      @tutorials = create(:tutorial)
+      @user = create(:user)
+      @tutorial = create(:tutorial, user: @user)
     end
     it 'displays the tutorial I want to edit' do
       get :edit, id: @tutorial.id
@@ -68,7 +70,8 @@ RSpec.describe TutorialsController, :type => :controller do
 
   describe '#update' do
       before do
-        @tutorial = create(:tutorial, title: 'new')
+        @user = create(:user)
+        @tutorial = create(:tutorial, title: 'new', user: @user)
       end
     context 'when updateing a proper record' do
       it 'updates a tutorial and saves it to the db' do
@@ -87,9 +90,10 @@ RSpec.describe TutorialsController, :type => :controller do
     end
   end
 
-  describe '#destroy' do
+  describe '#destroy', :focus do
     before do
-      @tutorial = create(:tutorial)
+      @user = create(:user)
+      @tutorial = create(:tutorial, user: @user)
     end
     it 'removes the tutorial from the database' do
       expect{
