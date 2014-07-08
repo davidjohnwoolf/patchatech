@@ -14,6 +14,7 @@ class TutorialsController < ApplicationController
 
     def create
       @tutorial = Tutorial.new(tutorial_params)
+      @tutorial.user_id = current_user.id
       if @tutorial.save
         redirect_to tutorials_path
       else
