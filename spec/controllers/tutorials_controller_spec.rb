@@ -90,7 +90,7 @@ RSpec.describe TutorialsController, :type => :controller do
     end
   end
 
-  describe '#destroy', :focus do
+  describe '#destroy' do
     before do
       @user = create(:user)
       @tutorial = create(:tutorial, user: @user)

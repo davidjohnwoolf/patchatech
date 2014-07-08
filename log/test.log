@@ -980,3 +980,355 @@ Completed 302 Found in 2ms (ActiveRecord: 0.6ms)
   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tutorials"[0m
   [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
   [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (27.5ms)[0m  BEGIN
+  [1m[36m (34.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+Processing by SiteController#index as HTML
+  Rendered site/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 41ms (Views: 40.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.7ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_2
+  [1m[36mUser Exists (121.5ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'anika.reynolds@barrowssauer.com' LIMIT 1[0m
+  [1m[35mUser Load (17.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."confirmation_token" = '7e407ce87e91dfee8b2cb4d1a86b016882281c1e6c68ec41f677fae6876214a0'  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mSQL (34.8ms)[0m  [1mINSERT INTO "users" ("confirmation_sent_at", "confirmation_token", "created_at", "email", "encrypted_password", "first_name", "last_name", "updated_at", "username") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["confirmation_sent_at", "2014-07-08 20:45:59.195959"], ["confirmation_token", "7e407ce87e91dfee8b2cb4d1a86b016882281c1e6c68ec41f677fae6876214a0"], ["created_at", "2014-07-08 20:45:58.933881"], ["email", "anika.reynolds@barrowssauer.com"], ["encrypted_password", "$2a$04$M65cId2pql/2Bj1Ie5DKKusQYakKRCcOppZiaDij4mcw1P80wyUyy"], ["first_name", "Claire"], ["last_name", "Toy"], ["updated_at", "2014-07-08 20:45:58.933881"], ["username", "vita.gutkowski"]]
+
+Devise::Mailer#confirmation_instructions: processed outbound mail in 190.0ms
+
+Sent mail to anika.reynolds@barrowssauer.com (11.9ms)
+Date: Tue, 08 Jul 2014 14:45:59 -0600
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: anika.reynolds@barrowssauer.com
+Message-ID: <53bc58877b076_f04f80855be44696@Landons-MacBook-Pro.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome anika.reynolds@barrowssauer.com!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://test.dev/users/confirmation?confirmation_token=2E7FZcD4x2po9kj6xnbc">Confirm my account</a></p>
+
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_2
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (25.2ms)[0m  INSERT INTO "tutorials" ("category", "created_at", "description", "title", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["category", "unde"], ["created_at", "2014-07-08 20:45:59.558720"], ["description", "Officiis id natus nostrum voluptatem voluptas eius voluptatem amet eum aliquid perspiciatis repudiandae."], ["title", "magnam"], ["updated_at", "2014-07-08 20:45:59.558720"], ["user_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_2
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "tutorials" ("category", "created_at", "description", "title", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["category", "magni"], ["created_at", "2014-07-08 20:45:59.586934"], ["description", "Fugiat numquam ullam qui eum placeat ut asperiores impedit ut nobis facilis."], ["title", "rerum"], ["updated_at", "2014-07-08 20:45:59.586934"], ["user_id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_2
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tutorials" ("category", "created_at", "description", "title", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["category", "harum"], ["created_at", "2014-07-08 20:45:59.589439"], ["description", "Et architecto repudiandae quo non minus maiores fuga tenetur aut odio quos neque id."], ["title", "nobis"], ["updated_at", "2014-07-08 20:45:59.589439"], ["user_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+Processing by TutorialsController#index as HTML
+Completed 200 OK in 14ms (Views: 13.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "tutorials"
+  [1m[36m (0.3ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mUser Exists (35.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'jovany_konopelski@harveyschneider.biz' LIMIT 1
+  [1m[36mUser Load (14.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."confirmation_token" = '4be1b02143981930f1c456b58943f452ba70c56f0aef0a8cbb93619d9cd3ef88'  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("confirmation_sent_at", "confirmation_token", "created_at", "email", "encrypted_password", "first_name", "last_name", "updated_at", "username") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["confirmation_sent_at", "2014-07-08 20:45:59.680962"], ["confirmation_token", "4be1b02143981930f1c456b58943f452ba70c56f0aef0a8cbb93619d9cd3ef88"], ["created_at", "2014-07-08 20:45:59.665508"], ["email", "jovany_konopelski@harveyschneider.biz"], ["encrypted_password", "$2a$04$f9lAQjEYprwskva9osnVP.V/q5v4oAluo9y/JR9ifzIw6EL.aTAmy"], ["first_name", "Jessica"], ["last_name", "Eichmann"], ["updated_at", "2014-07-08 20:45:59.665508"], ["username", "glen.kuhlman"]]
+
+Devise::Mailer#confirmation_instructions: processed outbound mail in 9.2ms
+
+Sent mail to jovany_konopelski@harveyschneider.biz (12.2ms)
+Date: Tue, 08 Jul 2014 14:45:59 -0600
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: jovany_konopelski@harveyschneider.biz
+Message-ID: <53bc5887a96a7_f04f80855be4478c@Landons-MacBook-Pro.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome jovany_konopelski@harveyschneider.biz!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://test.dev/users/confirmation?confirmation_token=pSQ-pmrEa6_5WqxzUw_x">Confirm my account</a></p>
+
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_2
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "tutorials" ("category", "created_at", "description", "title", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["category", "aut"], ["created_at", "2014-07-08 20:45:59.706597"], ["description", "Dolor aliquid dolor porro placeat amet quia error doloribus et qui dolore."], ["title", "Video1"], ["updated_at", "2014-07-08 20:45:59.706597"], ["user_id", 2]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_2
+Processing by TutorialsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mTutorial Load (0.4ms)[0m  [1mSELECT  "tutorials".* FROM "tutorials"  WHERE "tutorials"."id" = $1 LIMIT 1[0m  [["id", 4]]
+Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+Processing by TutorialsController#new as HTML
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "tutorials"
+Processing by TutorialsController#create as HTML
+  Parameters: {"tutorial"=>{"user_id"=>"2", "title"=>"a new tutorial", "description"=>"a tech video", "category"=>"apple"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tutorials" ("category", "created_at", "description", "title", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["category", "apple"], ["created_at", "2014-07-08 20:45:59.725799"], ["description", "a tech video"], ["title", "a new tutorial"], ["updated_at", "2014-07-08 20:45:59.725799"], ["user_id", 2]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+Redirected to http://test.host/tutorials
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "tutorials"
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+Processing by TutorialsController#create as HTML
+  Parameters: {"tutorial"=>{"title"=>nil}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_2
+Completed 200 OK in 4ms (Views: 0.8ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "tutorials"[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_2
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'cathrine_kilback@gibsonbailey.name' LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."confirmation_token" = 'dc63763455be3235562468d1d1972008a70d8a46e6ffd3c0b1be49373a23efcb'  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("confirmation_sent_at", "confirmation_token", "created_at", "email", "encrypted_password", "first_name", "last_name", "updated_at", "username") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["confirmation_sent_at", "2014-07-08 20:45:59.743532"], ["confirmation_token", "dc63763455be3235562468d1d1972008a70d8a46e6ffd3c0b1be49373a23efcb"], ["created_at", "2014-07-08 20:45:59.742332"], ["email", "cathrine_kilback@gibsonbailey.name"], ["encrypted_password", "$2a$04$Yb.4yriMMZGSWlFnvDReFebiiOwXWC3UXlVliv.t9sT5GeocpAM5G"], ["first_name", "Martina"], ["last_name", "Moore"], ["updated_at", "2014-07-08 20:45:59.742332"], ["username", "kennith.walter"]]
+
+Devise::Mailer#confirmation_instructions: processed outbound mail in 7.3ms
+
+Sent mail to cathrine_kilback@gibsonbailey.name (6.4ms)
+Date: Tue, 08 Jul 2014 14:45:59 -0600
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: cathrine_kilback@gibsonbailey.name
+Message-ID: <53bc5887b7dad_f04f80855be44837@Landons-MacBook-Pro.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome cathrine_kilback@gibsonbailey.name!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://test.dev/users/confirmation?confirmation_token=e3fzsPEZXztotBCGxjZK">Confirm my account</a></p>
+
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_2
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tutorials" ("category", "created_at", "description", "title", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["category", "possimus"], ["created_at", "2014-07-08 20:45:59.760613"], ["description", "Magni possimus sequi molestiae quia in rerum sit qui ipsum autem."], ["title", "ut"], ["updated_at", "2014-07-08 20:45:59.760613"], ["user_id", 3]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+Processing by TutorialsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mTutorial Load (0.4ms)[0m  SELECT  "tutorials".* FROM "tutorials"  WHERE "tutorials"."id" = $1 LIMIT 1  [["id", 6]]
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.4ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'lloyd@jacobipredovic.us' LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."confirmation_token" = '313483b5fce30e90cabfb7974c80467b2ee760c346dc53cc8736709c5c7785f9'  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("confirmation_sent_at", "confirmation_token", "created_at", "email", "encrypted_password", "first_name", "last_name", "updated_at", "username") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["confirmation_sent_at", "2014-07-08 20:45:59.774011"], ["confirmation_token", "313483b5fce30e90cabfb7974c80467b2ee760c346dc53cc8736709c5c7785f9"], ["created_at", "2014-07-08 20:45:59.772837"], ["email", "lloyd@jacobipredovic.us"], ["encrypted_password", "$2a$04$TzCW.81vZ2ulRbt.GYdAaO7TdZkE/tz/V2ia/qWW12ZS0M.T888z6"], ["first_name", "Bonita"], ["last_name", "Mante"], ["updated_at", "2014-07-08 20:45:59.772837"], ["username", "theresa.mckenzie"]]
+
+Devise::Mailer#confirmation_instructions: processed outbound mail in 7.3ms
+
+Sent mail to lloyd@jacobipredovic.us (6.1ms)
+Date: Tue, 08 Jul 2014 14:45:59 -0600
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: lloyd@jacobipredovic.us
+Message-ID: <53bc5887bf4d2_f04f80855be449b4@Landons-MacBook-Pro.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome lloyd@jacobipredovic.us!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://test.dev/users/confirmation?confirmation_token=xgARqeNJKEUrR5A-BAhV">Confirm my account</a></p>
+
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_2
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tutorials" ("category", "created_at", "description", "title", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["category", "autem"], ["created_at", "2014-07-08 20:45:59.790507"], ["description", "Dolorem quod itaque numquam et eos qui sapiente officia mollitia vel explicabo a corporis."], ["title", "new"], ["updated_at", "2014-07-08 20:45:59.790507"], ["user_id", 4]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_2
+Processing by TutorialsController#update as HTML
+  Parameters: {"tutorial"=>{"title"=>"updated"}, "id"=>"7"}
+  [1m[36mTutorial Load (0.3ms)[0m  [1mSELECT  "tutorials".* FROM "tutorials"  WHERE "tutorials"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_2
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "tutorials" SET "title" = $1, "updated_at" = $2 WHERE "tutorials"."id" = 7[0m  [["title", "updated"], ["updated_at", "2014-07-08 20:45:59.794558"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_2
+Redirected to http://test.host/tutorials
+Completed 302 Found in 19ms (ActiveRecord: 1.1ms)
+  [1m[36mTutorial Load (0.3ms)[0m  [1mSELECT  "tutorials".* FROM "tutorials"  WHERE "tutorials"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_2
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'elda@walsh.name' LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."confirmation_token" = '09ed8eae508052091309470edd851f8e627572e456a9ef441d7e7e4b90b30d93'  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "users" ("confirmation_sent_at", "confirmation_token", "created_at", "email", "encrypted_password", "first_name", "last_name", "updated_at", "username") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["confirmation_sent_at", "2014-07-08 20:45:59.821919"], ["confirmation_token", "09ed8eae508052091309470edd851f8e627572e456a9ef441d7e7e4b90b30d93"], ["created_at", "2014-07-08 20:45:59.820648"], ["email", "elda@walsh.name"], ["encrypted_password", "$2a$04$TMBsq8xnbgla8whC2lKNreaW2zMzbDAefPrVRZQlb0tfdxNG9hdSW"], ["first_name", "Tierra"], ["last_name", "Stoltenberg"], ["updated_at", "2014-07-08 20:45:59.820648"], ["username", "evans.kessler"]]
+
+Devise::Mailer#confirmation_instructions: processed outbound mail in 7.9ms
+
+Sent mail to elda@walsh.name (6.2ms)
+Date: Tue, 08 Jul 2014 14:45:59 -0600
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: elda@walsh.name
+Message-ID: <53bc5887cb2ce_f04f80855be450c8@Landons-MacBook-Pro.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome elda@walsh.name!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://test.dev/users/confirmation?confirmation_token=xie3LetNdkXyWEJiMHqV">Confirm my account</a></p>
+
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_2
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tutorials" ("category", "created_at", "description", "title", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["category", "eos"], ["created_at", "2014-07-08 20:45:59.839366"], ["description", "Aspernatur vitae rerum sint rerum voluptas dolorem debitis est accusamus."], ["title", "new"], ["updated_at", "2014-07-08 20:45:59.839366"], ["user_id", 5]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+Processing by TutorialsController#update as HTML
+  Parameters: {"tutorial"=>{"title"=>nil}, "id"=>"8"}
+  [1m[35mTutorial Load (0.3ms)[0m  SELECT  "tutorials".* FROM "tutorials"  WHERE "tutorials"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_2
+Completed 200 OK in 4ms (Views: 1.0ms | ActiveRecord: 0.6ms)
+  [1m[36mTutorial Load (0.3ms)[0m  [1mSELECT  "tutorials".* FROM "tutorials"  WHERE "tutorials"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_2
+  [1m[36mUser Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'grady_morissette@hyatt.co.uk' LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."confirmation_token" = 'ee94bd15d4692a8bef118fac9415025e4e4eaae8620bf58a9256d2e830f5a55b'  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("confirmation_sent_at", "confirmation_token", "created_at", "email", "encrypted_password", "first_name", "last_name", "updated_at", "username") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["confirmation_sent_at", "2014-07-08 20:45:59.855071"], ["confirmation_token", "ee94bd15d4692a8bef118fac9415025e4e4eaae8620bf58a9256d2e830f5a55b"], ["created_at", "2014-07-08 20:45:59.853889"], ["email", "grady_morissette@hyatt.co.uk"], ["encrypted_password", "$2a$04$oBaICosQvziFhqp9ozP61umeMYGJql5k1Iuhd4E5qDrKwQIBEEkdC"], ["first_name", "Melvin"], ["last_name", "Luettgen"], ["updated_at", "2014-07-08 20:45:59.853889"], ["username", "sasha_kemmer"]]
+
+Devise::Mailer#confirmation_instructions: processed outbound mail in 8.3ms
+
+Sent mail to grady_morissette@hyatt.co.uk (13.8ms)
+Date: Tue, 08 Jul 2014 14:45:59 -0600
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: grady_morissette@hyatt.co.uk
+Message-ID: <53bc5887d3514_f04f80855be4517c@Landons-MacBook-Pro.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome grady_morissette@hyatt.co.uk!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://test.dev/users/confirmation?confirmation_token=2aZZaVKGuKXn_4xxLsbR">Confirm my account</a></p>
+
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_2
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tutorials" ("category", "created_at", "description", "title", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["category", "earum"], ["created_at", "2014-07-08 20:45:59.880269"], ["description", "Voluptatem minima dolores occaecati voluptatum et rerum rem ab cupiditate sed odit consequatur."], ["title", "optio"], ["updated_at", "2014-07-08 20:45:59.880269"], ["user_id", 6]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "tutorials"
+Processing by TutorialsController#destroy as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mTutorial Load (0.2ms)[0m  [1mSELECT  "tutorials".* FROM "tutorials"  WHERE "tutorials"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_2
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "tutorials" WHERE "tutorials"."id" = $1[0m  [["id", 9]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_2
+Redirected to http://test.host/tutorials
+Completed 302 Found in 2ms (ActiveRecord: 0.7ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tutorials"[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
