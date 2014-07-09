@@ -1,4 +1,5 @@
 class TutorialsController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :create]
   before_action :find_tutorial, only: [:update, :edit, :destroy, :show]
 
     def index
