@@ -8,5 +8,6 @@ FactoryGirl.define do
     username { Faker::Internet.user_name}
     password { 'password' }
     password_confirmation { 'password' }
+    confirmed_at {Time.now}
   end
 end

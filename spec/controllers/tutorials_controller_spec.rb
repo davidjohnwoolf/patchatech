@@ -1,5 +1,6 @@
 require 'rails_helper'
 
+
 RSpec.describe TutorialsController, :type => :controller do
 
   describe '#index' do
@@ -29,30 +30,48 @@ RSpec.describe TutorialsController, :type => :controller do
   end
 
   describe '#new' do
-    it 'sets up a new tutorial instance' do
-      get :new
-      expect(response).to be_success
-      expect(assigns(:tutorial)).to be_new_record
-      expect(response).to render_template('new')
+    context 'user is signed in' do
+      before do
+        @user = create(:user)
+        sign_in @user
+      end
+      it 'sets up a new tutorial instance' do
+        get :new
+        expect(response).to be_success
+        expect(assigns(:tutorial)).to be_new_record
+        expect(response).to render_template('new')
+      end
+    end
+    context 'user is not signed in' do
+      before do
+        @user = create(:user)
+      end
+      it 'redirects to sign_up' do
+        get :new
+        redirect_to new_user_registration_path
+      end
     end
   end
 
-  describe '#create' do
-      context 'when saving a proper record' do
-        it 'creates a new tutorial and saves it to the db' do
-          expect {
-          post :create, tutorial: { user_id: 2, title: 'a new tutorial', description: 'a tech video', category: 'apple' }
-        }.to change(Tutorial, :count).by(1)
-
-        end
+  describe '#create', :focus do
+    before do
+      @user = create(:user)
+      sign_in @user
+    end
+    context 'when saving a proper record' do
+      it 'creates a new tutorial and saves it to the db' do
+        expect {
+        post :create, tutorial: { user_id: 2, title: 'a new tutorial', description: 'a tech video', category: 'apple' } # if user is signed in
+      }.to change(Tutorial, :count).by(1)
       end
-      context 'when the record fails to save' do
-        it 'renders the new template and does not save to the db' do
-          post :create, tutorial: {title: nil}
-          expect(response).to render_template("new")
-          expect(Tutorial.count).to eq 0
-        end
+    end
+    context 'when the record fails to save' do
+      it 'renders the new template and does not save to the db' do
+        post :create, tutorial: {title: nil}
+        expect(response).to render_template("new")
+        expect(Tutorial.count).to eq 0
       end
+    end
   end
 
   describe '#edit' do

@@ -1,6 +1,9 @@
 class TutorialsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create]
   before_action :find_tutorial, only: [:update, :edit, :destroy, :show]
+  before_action :check_tutorial_user, only: [:edit, :update, :destroy]
+
+
 
     def index
       @tutorials = Tutorial.all
@@ -40,6 +43,14 @@ class TutorialsController < ApplicationController
     end
 
     private
+
+    def check_tutorial_user
+      find_tutorial
+      if current_user.id != @tutorial.user_id
+        render :show
+      end
+    end
+
 
     def tutorial_params
       params.require(:tutorial).permit(:title, :description, :category, :user_id)
