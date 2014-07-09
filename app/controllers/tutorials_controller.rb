@@ -13,9 +13,10 @@ class TutorialsController < ApplicationController
     end
 
     def create
-      @tutorial = Tutoria.new
-      if tutorial.save
-        redirect_to tutorial_path
+      @tutorial = Tutorial.new(tutorial_params)
+      @tutorial.user_id = current_user.id
+      if @tutorial.save
+        redirect_to tutorials_path
       else
         render :new
       end
@@ -26,7 +27,7 @@ class TutorialsController < ApplicationController
 
     def update
       if @tutorial.update_attributes(tutorial_params)
-        redirect_to tutorial_path
+        redirect_to tutorials_path
       else
         render :edit
       end
@@ -34,12 +35,13 @@ class TutorialsController < ApplicationController
 
     def destroy
       @tutorial.destroy
+      redirect_to tutorials_path
     end
 
     private
 
     def tutorial_params
-      params.require(:tutorial).permit(:title, :description, :category)
+      params.require(:tutorial).permit(:title, :description, :category, :user_id)
     end
 
     def find_tutorial
