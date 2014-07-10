@@ -7,5 +7,5 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => { registrations: 'registrations' }
 
   root 'site#index'
-
+    get '/search', to: 'tutorials#search', as: :search
 end
