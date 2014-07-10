@@ -36,3 +36,539 @@ Processing by TutorialsController#edit as HTML
 Completed 200 OK in 5ms (Views: 0.9ms | ActiveRecord: 0.3ms)
   [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
   [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+Processing by SiteController#index as HTML
+  Rendered site/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 5ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_2
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'osborne_davis@purdy.ca' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("confirmed_at", "created_at", "email", "encrypted_password", "first_name", "last_name", "updated_at", "username") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["confirmed_at", "2014-07-10 21:10:11.335610"], ["created_at", "2014-07-10 21:10:11.345316"], ["email", "osborne_davis@purdy.ca"], ["encrypted_password", "$2a$04$YKgDq/bnPmDCc1yvZg5KEejNcXkg7qVSzzPIvbR7aCX.zw5VGBoV."], ["first_name", "Allen"], ["last_name", "Wiegand"], ["updated_at", "2014-07-10 21:10:11.345316"], ["username", "ova"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_2
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tutorials" ("category", "created_at", "description", "title", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["category", "libero"], ["created_at", "2014-07-10 21:10:11.359813"], ["description", "Incidunt mollitia et inventore doloribus rerum architecto accusantium adipisci eum nulla velit et soluta impedit."], ["title", "in"], ["updated_at", "2014-07-10 21:10:11.359813"], ["user_id", 259]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_2
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tutorials" ("category", "created_at", "description", "title", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["category", "doloremque"], ["created_at", "2014-07-10 21:10:11.362188"], ["description", "Modi ut pariatur est enim recusandae adipisci quia aliquid totam vel."], ["title", "eius"], ["updated_at", "2014-07-10 21:10:11.362188"], ["user_id", 259]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_2
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tutorials" ("category", "created_at", "description", "title", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["category", "facere"], ["created_at", "2014-07-10 21:10:11.363681"], ["description", "Id sed modi at dolor aliquam facilis numquam nobis sint quidem rerum et dignissimos fuga."], ["title", "aperiam"], ["updated_at", "2014-07-10 21:10:11.363681"], ["user_id", 259]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_2
+Processing by TutorialsController#index as HTML
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "tutorials"[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_2
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'neoma.west@romagueranolan.name' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("confirmed_at", "created_at", "email", "encrypted_password", "first_name", "last_name", "updated_at", "username") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["confirmed_at", "2014-07-10 21:10:11.373236"], ["created_at", "2014-07-10 21:10:11.375036"], ["email", "neoma.west@romagueranolan.name"], ["encrypted_password", "$2a$04$gR1jagiSIEdMTobGWDaUde7QvdPBTbSeVUXIetFTzd9YZFsemIg4G"], ["first_name", "Margaretta"], ["last_name", "Kilback"], ["updated_at", "2014-07-10 21:10:11.375036"], ["username", "hiram.will"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_2
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tutorials" ("category", "created_at", "description", "title", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["category", "deleniti"], ["created_at", "2014-07-10 21:10:11.377608"], ["description", "Est veritatis cumque quidem placeat odio et soluta voluptas eum."], ["title", "Video1"], ["updated_at", "2014-07-10 21:10:11.377608"], ["user_id", 260]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_2
+Processing by TutorialsController#show as HTML
+  Parameters: {"id"=>"224"}
+  [1m[36mTutorial Load (0.2ms)[0m  [1mSELECT  "tutorials".* FROM "tutorials"  WHERE "tutorials"."id" = $1 LIMIT 1[0m  [["id", 224]]
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_2
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'geovany@feil.name' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("confirmed_at", "created_at", "email", "encrypted_password", "first_name", "last_name", "updated_at", "username") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["confirmed_at", "2014-07-10 21:10:11.385792"], ["created_at", "2014-07-10 21:10:11.386985"], ["email", "geovany@feil.name"], ["encrypted_password", "$2a$04$1JkF1Zfac6Nn5pfTdT63y.EJSmJWcIlKO3I3ZR.6FWUS3f5w1ksf6"], ["first_name", "Elva"], ["last_name", "O'Hara"], ["updated_at", "2014-07-10 21:10:11.386985"], ["username", "aric"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+Processing by TutorialsController#new as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 261  ORDER BY "users"."id" ASC LIMIT 1
+Completed 200 OK in 6ms (Views: 1.0ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'wilma@corwin.info' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("confirmed_at", "created_at", "email", "encrypted_password", "first_name", "last_name", "updated_at", "username") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["confirmed_at", "2014-07-10 21:10:11.399020"], ["created_at", "2014-07-10 21:10:11.400182"], ["email", "wilma@corwin.info"], ["encrypted_password", "$2a$04$j0Ad8Qq435XU9qQ.38W2xeTOizm6x81xftiRqhgsxsZmMuqyDrnjK"], ["first_name", "Rigoberto"], ["last_name", "Swaniawski"], ["updated_at", "2014-07-10 21:10:11.400182"], ["username", "aliza"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_2
+Processing by TutorialsController#new as HTML
+Completed 401 Unauthorized in 4ms
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'kirk.reichert@swaniawskifarrell.biz' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("confirmed_at", "created_at", "email", "encrypted_password", "first_name", "last_name", "updated_at", "username") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["confirmed_at", "2014-07-10 21:10:11.418165"], ["created_at", "2014-07-10 21:10:11.419430"], ["email", "kirk.reichert@swaniawskifarrell.biz"], ["encrypted_password", "$2a$04$Eb6qcBNWci0WCVuCEqEPKOzjohx3aVlJRdKZkwYxrLaQsgwQbTISC"], ["first_name", "German"], ["last_name", "Mraz"], ["updated_at", "2014-07-10 21:10:11.419430"], ["username", "ilene_ankunding"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_2
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tutorials"[0m
+Processing by TutorialsController#create as HTML
+  Parameters: {"tutorial"=>{"user_id"=>"2", "title"=>"a new tutorial", "description"=>"a tech video", "category"=>"apple"}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 263  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tutorials" ("category", "created_at", "description", "title", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["category", "apple"], ["created_at", "2014-07-10 21:10:11.425975"], ["description", "a tech video"], ["title", "a new tutorial"], ["updated_at", "2014-07-10 21:10:11.425975"], ["user_id", 263]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+Redirected to http://test.host/tutorials
+Completed 302 Found in 3ms (ActiveRecord: 0.7ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tutorials"
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'mina.glover@goyette.com' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("confirmed_at", "created_at", "email", "encrypted_password", "first_name", "last_name", "updated_at", "username") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["confirmed_at", "2014-07-10 21:10:11.430999"], ["created_at", "2014-07-10 21:10:11.432121"], ["email", "mina.glover@goyette.com"], ["encrypted_password", "$2a$04$Oo.b8IuiqHLR0haCUH9VY.YiowCT9/rNAFmHQ3c5BURdSWaVcdj1q"], ["first_name", "Clyde"], ["last_name", "Wilderman"], ["updated_at", "2014-07-10 21:10:11.432121"], ["username", "reyes_eichmann"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_2
+Processing by TutorialsController#create as HTML
+  Parameters: {"tutorial"=>{"title"=>nil}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 264  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_2
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_2[0m
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tutorials"
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'izaiah_nader@jacobi.co.uk' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("confirmed_at", "created_at", "email", "encrypted_password", "first_name", "last_name", "updated_at", "username") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["confirmed_at", "2014-07-10 21:10:11.442105"], ["created_at", "2014-07-10 21:10:11.443207"], ["email", "izaiah_nader@jacobi.co.uk"], ["encrypted_password", "$2a$04$2HFHext9i5uou8e8DWglg.xIx5q0jQv3wf6nRljD6RIV1ey2RBXuu"], ["first_name", "Hiram"], ["last_name", "Moore"], ["updated_at", "2014-07-10 21:10:11.443207"], ["username", "mabelle.herzog"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_2
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tutorials" ("category", "created_at", "description", "title", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["category", "ullam"], ["created_at", "2014-07-10 21:10:11.445075"], ["description", "Enim voluptatem magnam molestiae odio delectus voluptas porro labore officiis enim velit laboriosam esse ut."], ["title", "suscipit"], ["updated_at", "2014-07-10 21:10:11.445075"], ["user_id", 265]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+Processing by TutorialsController#edit as HTML
+  Parameters: {"id"=>"226"}
+  [1m[35mTutorial Load (0.2ms)[0m  SELECT  "tutorials".* FROM "tutorials"  WHERE "tutorials"."id" = $1 LIMIT 1  [["id", 226]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 265  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_2
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'kip@rolfson.info' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("confirmed_at", "created_at", "email", "encrypted_password", "first_name", "last_name", "updated_at", "username") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["confirmed_at", "2014-07-10 21:10:11.453465"], ["created_at", "2014-07-10 21:10:11.454665"], ["email", "kip@rolfson.info"], ["encrypted_password", "$2a$04$68hsSVmI./lnpNznzAyuZuJ2AJjk0Ik7RCI4t9.AM3t.jUaSUKQB2"], ["first_name", "Milan"], ["last_name", "Schowalter"], ["updated_at", "2014-07-10 21:10:11.454665"], ["username", "vidal_kessler"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_2
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tutorials" ("category", "created_at", "description", "title", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["category", "qui"], ["created_at", "2014-07-10 21:10:11.456514"], ["description", "Omnis nulla accusamus est autem eos quia maiores quis placeat et voluptatem soluta."], ["title", "ea"], ["updated_at", "2014-07-10 21:10:11.456514"], ["user_id", 266]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_2
+Processing by TutorialsController#edit as HTML
+  Parameters: {"id"=>"227"}
+  [1m[36mTutorial Load (0.2ms)[0m  [1mSELECT  "tutorials".* FROM "tutorials"  WHERE "tutorials"."id" = $1 LIMIT 1[0m  [["id", 227]]
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_2
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'lucious@bogisich.info' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("confirmed_at", "created_at", "email", "encrypted_password", "first_name", "last_name", "updated_at", "username") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["confirmed_at", "2014-07-10 21:10:11.465290"], ["created_at", "2014-07-10 21:10:11.466553"], ["email", "lucious@bogisich.info"], ["encrypted_password", "$2a$04$/V8yXyDTtB5f1G/Tklpr2uQyy31I.pYf2G.0///QmV2S11zxjqw8G"], ["first_name", "Elvie"], ["last_name", "Reynolds"], ["updated_at", "2014-07-10 21:10:11.466553"], ["username", "ayden"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_2
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tutorials" ("category", "created_at", "description", "title", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["category", "aut"], ["created_at", "2014-07-10 21:10:11.468485"], ["description", "Qui omnis autem tempore cupiditate consequuntur deserunt numquam ex nihil cumque id ut ipsum distinctio."], ["title", "new"], ["updated_at", "2014-07-10 21:10:11.468485"], ["user_id", 267]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_2
+Processing by TutorialsController#update as HTML
+  Parameters: {"tutorial"=>{"title"=>"updated"}, "id"=>"228"}
+  [1m[36mTutorial Load (0.2ms)[0m  [1mSELECT  "tutorials".* FROM "tutorials"  WHERE "tutorials"."id" = $1 LIMIT 1[0m  [["id", 228]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 267  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (1.1ms)[0m  UPDATE "tutorials" SET "title" = $1, "updated_at" = $2 WHERE "tutorials"."id" = 228  [["title", "updated"], ["updated_at", "2014-07-10 21:10:11.472257"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+Redirected to http://test.host/tutorials
+Completed 302 Found in 5ms (ActiveRecord: 1.8ms)
+  [1m[35mTutorial Load (0.3ms)[0m  SELECT  "tutorials".* FROM "tutorials"  WHERE "tutorials"."id" = $1 LIMIT 1  [["id", 228]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'ashlee_powlowski@hoppe.co.uk' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("confirmed_at", "created_at", "email", "encrypted_password", "first_name", "last_name", "updated_at", "username") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["confirmed_at", "2014-07-10 21:10:11.481854"], ["created_at", "2014-07-10 21:10:11.483178"], ["email", "ashlee_powlowski@hoppe.co.uk"], ["encrypted_password", "$2a$04$XL9M0milMZpCzCk9sdfkDuGuUGYnc8JhVpLh9EXrmM6JWbgq9IqYG"], ["first_name", "Keanu"], ["last_name", "McCullough"], ["updated_at", "2014-07-10 21:10:11.483178"], ["username", "earnestine"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_2
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tutorials" ("category", "created_at", "description", "title", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["category", "maiores"], ["created_at", "2014-07-10 21:10:11.485524"], ["description", "Ab aut iste porro aspernatur quos consequatur nemo quis vel aut sit est laboriosam libero."], ["title", "new"], ["updated_at", "2014-07-10 21:10:11.485524"], ["user_id", 268]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+Processing by TutorialsController#update as HTML
+  Parameters: {"tutorial"=>{"title"=>nil}, "id"=>"229"}
+  [1m[35mTutorial Load (0.2ms)[0m  SELECT  "tutorials".* FROM "tutorials"  WHERE "tutorials"."id" = $1 LIMIT 1  [["id", 229]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 268  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_2
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_2[0m
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.7ms)
+  [1m[35mTutorial Load (0.2ms)[0m  SELECT  "tutorials".* FROM "tutorials"  WHERE "tutorials"."id" = $1 LIMIT 1  [["id", 229]]
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mUser Exists (1.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'jairo@smitham.info' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("confirmed_at", "created_at", "email", "encrypted_password", "first_name", "last_name", "updated_at", "username") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["confirmed_at", "2014-07-10 21:10:11.495067"], ["created_at", "2014-07-10 21:10:11.497143"], ["email", "jairo@smitham.info"], ["encrypted_password", "$2a$04$XL8rkmvAJGhuOUPAHU47deHVg420xixieuH6VE9CCZqw72HfjUhbG"], ["first_name", "Kirsten"], ["last_name", "Kautzer"], ["updated_at", "2014-07-10 21:10:11.497143"], ["username", "dashawn"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_2
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tutorials" ("category", "created_at", "description", "title", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["category", "quisquam"], ["created_at", "2014-07-10 21:10:11.499927"], ["description", "Deleniti consequatur et nemo tempore quidem expedita repellendus itaque doloribus non."], ["title", "omnis"], ["updated_at", "2014-07-10 21:10:11.499927"], ["user_id", 269]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "tutorials"
+Processing by TutorialsController#destroy as HTML
+  Parameters: {"id"=>"230"}
+  [1m[36mTutorial Load (0.2ms)[0m  [1mSELECT  "tutorials".* FROM "tutorials"  WHERE "tutorials"."id" = $1 LIMIT 1[0m  [["id", 230]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 269  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "tutorials" WHERE "tutorials"."id" = $1  [["id", 230]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+Redirected to http://test.host/tutorials
+Completed 302 Found in 3ms (ActiveRecord: 0.9ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tutorials"
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+Processing by SiteController#index as HTML
+  Rendered site/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_2
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'allison_kshlerin@becker.ca' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("confirmed_at", "created_at", "email", "encrypted_password", "first_name", "last_name", "updated_at", "username") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["confirmed_at", "2014-07-10 21:10:26.253713"], ["created_at", "2014-07-10 21:10:26.263440"], ["email", "allison_kshlerin@becker.ca"], ["encrypted_password", "$2a$04$Flljvr1BXGSA2v15kI.jJ.0ASli59zatyr53ALyB/afcB5Gc8OljC"], ["first_name", "Lindsay"], ["last_name", "Smith"], ["updated_at", "2014-07-10 21:10:26.263440"], ["username", "abagail"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_2
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tutorials" ("category", "created_at", "description", "title", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["category", "quia"], ["created_at", "2014-07-10 21:10:26.278289"], ["description", "Minus saepe ea facilis qui quae nesciunt rerum modi repellendus cum."], ["title", "eos"], ["updated_at", "2014-07-10 21:10:26.278289"], ["user_id", 270]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_2
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tutorials" ("category", "created_at", "description", "title", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["category", "beatae"], ["created_at", "2014-07-10 21:10:26.280516"], ["description", "Laborum ullam ut veniam eum et quasi accusamus incidunt repudiandae est similique perferendis dolorem sit."], ["title", "aliquid"], ["updated_at", "2014-07-10 21:10:26.280516"], ["user_id", 270]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_2
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tutorials" ("category", "created_at", "description", "title", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["category", "odit"], ["created_at", "2014-07-10 21:10:26.281979"], ["description", "Consectetur voluptatem adipisci rerum esse doloribus sed saepe explicabo ut."], ["title", "eum"], ["updated_at", "2014-07-10 21:10:26.281979"], ["user_id", 270]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_2
+Processing by TutorialsController#index as HTML
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "tutorials"[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_2
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'sheridan@simonis.co.uk' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("confirmed_at", "created_at", "email", "encrypted_password", "first_name", "last_name", "updated_at", "username") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["confirmed_at", "2014-07-10 21:10:26.291487"], ["created_at", "2014-07-10 21:10:26.292877"], ["email", "sheridan@simonis.co.uk"], ["encrypted_password", "$2a$04$eBZBaekfhHrZheXX7MCEVe4Cm64hIGUfBuahxiHXw5JdpurcutDai"], ["first_name", "Elizabeth"], ["last_name", "Haag"], ["updated_at", "2014-07-10 21:10:26.292877"], ["username", "kylie"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_2
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tutorials" ("category", "created_at", "description", "title", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["category", "ratione"], ["created_at", "2014-07-10 21:10:26.295053"], ["description", "Eos recusandae perferendis voluptatem nemo dolores ut iste excepturi molestiae."], ["title", "Video1"], ["updated_at", "2014-07-10 21:10:26.295053"], ["user_id", 271]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_2
+Processing by TutorialsController#show as HTML
+  Parameters: {"id"=>"234"}
+  [1m[36mTutorial Load (0.3ms)[0m  [1mSELECT  "tutorials".* FROM "tutorials"  WHERE "tutorials"."id" = $1 LIMIT 1[0m  [["id", 234]]
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_2
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'maudie@bernhard.com' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("confirmed_at", "created_at", "email", "encrypted_password", "first_name", "last_name", "updated_at", "username") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["confirmed_at", "2014-07-10 21:10:26.302871"], ["created_at", "2014-07-10 21:10:26.304031"], ["email", "maudie@bernhard.com"], ["encrypted_password", "$2a$04$QN76Qc6x0YQoepJGeJWG6.PMi/OEHN.7gzAkLbT.f3nhzyTlGKsgy"], ["first_name", "Brown"], ["last_name", "Yundt"], ["updated_at", "2014-07-10 21:10:26.304031"], ["username", "hubert"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+Processing by TutorialsController#new as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 272  ORDER BY "users"."id" ASC LIMIT 1
+Completed 200 OK in 6ms (Views: 1.1ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'mabelle@cummings.us' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("confirmed_at", "created_at", "email", "encrypted_password", "first_name", "last_name", "updated_at", "username") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["confirmed_at", "2014-07-10 21:10:26.316073"], ["created_at", "2014-07-10 21:10:26.317209"], ["email", "mabelle@cummings.us"], ["encrypted_password", "$2a$04$oE/lbnQW4pGkCHHDZNWomuYXXE40XxesHx1OaoLUBFqsHvmg.NjMi"], ["first_name", "Gardner"], ["last_name", "Wisozk"], ["updated_at", "2014-07-10 21:10:26.317209"], ["username", "lorenzo.kihn"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_2
+Processing by TutorialsController#new as HTML
+Completed 401 Unauthorized in 3ms
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'raymond_sawayn@okon.co.uk' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("confirmed_at", "created_at", "email", "encrypted_password", "first_name", "last_name", "updated_at", "username") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["confirmed_at", "2014-07-10 21:10:26.334478"], ["created_at", "2014-07-10 21:10:26.335777"], ["email", "raymond_sawayn@okon.co.uk"], ["encrypted_password", "$2a$04$4s0a7A6q5.thykHIdCMQV.25L2DmsqXHQNvYT2NafVqlckBONj016"], ["first_name", "Coleman"], ["last_name", "Farrell"], ["updated_at", "2014-07-10 21:10:26.335777"], ["username", "serena_abshire"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_2
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "tutorials"[0m
+Processing by TutorialsController#create as HTML
+  Parameters: {"tutorial"=>{"user_id"=>"2", "title"=>"a new tutorial", "description"=>"a tech video", "category"=>"apple"}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 274  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tutorials" ("category", "created_at", "description", "title", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["category", "apple"], ["created_at", "2014-07-10 21:10:26.341992"], ["description", "a tech video"], ["title", "a new tutorial"], ["updated_at", "2014-07-10 21:10:26.341992"], ["user_id", 274]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+Redirected to http://test.host/tutorials
+Completed 302 Found in 3ms (ActiveRecord: 0.7ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tutorials"
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'shawna@kulas.name' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("confirmed_at", "created_at", "email", "encrypted_password", "first_name", "last_name", "updated_at", "username") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["confirmed_at", "2014-07-10 21:10:26.347012"], ["created_at", "2014-07-10 21:10:26.348097"], ["email", "shawna@kulas.name"], ["encrypted_password", "$2a$04$r5wXwHlylliYml8qp0l0w.mBWjE13PELpgf1vcEwIEnni0td3LoiK"], ["first_name", "Sandra"], ["last_name", "Dietrich"], ["updated_at", "2014-07-10 21:10:26.348097"], ["username", "lea"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_2
+Processing by TutorialsController#create as HTML
+  Parameters: {"tutorial"=>{"title"=>nil}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 275  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_2
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_2[0m
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tutorials"
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'theresia_klocko@windler.us' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("confirmed_at", "created_at", "email", "encrypted_password", "first_name", "last_name", "updated_at", "username") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["confirmed_at", "2014-07-10 21:10:26.358156"], ["created_at", "2014-07-10 21:10:26.359200"], ["email", "theresia_klocko@windler.us"], ["encrypted_password", "$2a$04$YeHBvv1fISvaRniTKKZ7IOryQiwep9cVhi5AyglWCTTDywrneAACS"], ["first_name", "Garett"], ["last_name", "Terry"], ["updated_at", "2014-07-10 21:10:26.359200"], ["username", "bailee_nienow"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_2
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tutorials" ("category", "created_at", "description", "title", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["category", "impedit"], ["created_at", "2014-07-10 21:10:26.361019"], ["description", "Necessitatibus sint consectetur odit pariatur tempore eum ullam quod sit dolor animi deleniti nostrum."], ["title", "perferendis"], ["updated_at", "2014-07-10 21:10:26.361019"], ["user_id", 276]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+Processing by TutorialsController#edit as HTML
+  Parameters: {"id"=>"236"}
+  [1m[35mTutorial Load (0.2ms)[0m  SELECT  "tutorials".* FROM "tutorials"  WHERE "tutorials"."id" = $1 LIMIT 1  [["id", 236]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 276  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_2
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'brody@kochmurphy.info' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("confirmed_at", "created_at", "email", "encrypted_password", "first_name", "last_name", "updated_at", "username") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["confirmed_at", "2014-07-10 21:10:26.369410"], ["created_at", "2014-07-10 21:10:26.370525"], ["email", "brody@kochmurphy.info"], ["encrypted_password", "$2a$04$c5VEXf69c1txYCwQp8SXFOvFW7uHgDk.s4ajJ/zG08yhZzUjGzBgi"], ["first_name", "Angela"], ["last_name", "Torp"], ["updated_at", "2014-07-10 21:10:26.370525"], ["username", "tracey.purdy"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_2
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tutorials" ("category", "created_at", "description", "title", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["category", "ut"], ["created_at", "2014-07-10 21:10:26.372614"], ["description", "Voluptas perspiciatis vel pariatur et excepturi officiis ipsa eum eos ducimus nam quaerat magnam nostrum."], ["title", "consequatur"], ["updated_at", "2014-07-10 21:10:26.372614"], ["user_id", 277]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_2
+Processing by TutorialsController#edit as HTML
+  Parameters: {"id"=>"237"}
+  [1m[36mTutorial Load (0.2ms)[0m  [1mSELECT  "tutorials".* FROM "tutorials"  WHERE "tutorials"."id" = $1 LIMIT 1[0m  [["id", 237]]
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_2
+  [1m[36mUser Exists (0.5ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'justen@strosin.biz' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("confirmed_at", "created_at", "email", "encrypted_password", "first_name", "last_name", "updated_at", "username") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["confirmed_at", "2014-07-10 21:10:26.379472"], ["created_at", "2014-07-10 21:10:26.381575"], ["email", "justen@strosin.biz"], ["encrypted_password", "$2a$04$AYgWcOYB.JBDy7pUUNocO.Io/tTBS3i.23KgZPAylsOqKSuSJPRiS"], ["first_name", "Golda"], ["last_name", "Pagac"], ["updated_at", "2014-07-10 21:10:26.381575"], ["username", "richmond"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_2
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tutorials" ("category", "created_at", "description", "title", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["category", "sint"], ["created_at", "2014-07-10 21:10:26.383992"], ["description", "Debitis dolor fuga rerum reiciendis accusamus tempora omnis consequatur ea deleniti voluptatem."], ["title", "new"], ["updated_at", "2014-07-10 21:10:26.383992"], ["user_id", 278]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_2
+Processing by TutorialsController#update as HTML
+  Parameters: {"tutorial"=>{"title"=>"updated"}, "id"=>"238"}
+  [1m[36mTutorial Load (0.2ms)[0m  [1mSELECT  "tutorials".* FROM "tutorials"  WHERE "tutorials"."id" = $1 LIMIT 1[0m  [["id", 238]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 278  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "tutorials" SET "title" = $1, "updated_at" = $2 WHERE "tutorials"."id" = 238  [["title", "updated"], ["updated_at", "2014-07-10 21:10:26.387757"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+Redirected to http://test.host/tutorials
+Completed 302 Found in 4ms (ActiveRecord: 0.9ms)
+  [1m[35mTutorial Load (0.2ms)[0m  SELECT  "tutorials".* FROM "tutorials"  WHERE "tutorials"."id" = $1 LIMIT 1  [["id", 238]]
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'coby_cummerata@grimes.us' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("confirmed_at", "created_at", "email", "encrypted_password", "first_name", "last_name", "updated_at", "username") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["confirmed_at", "2014-07-10 21:10:26.394060"], ["created_at", "2014-07-10 21:10:26.395068"], ["email", "coby_cummerata@grimes.us"], ["encrypted_password", "$2a$04$SGLeJZO768p.xfR2GbhEqe/fHPDjRCw9h2fTwYF59C57l/.x55LyC"], ["first_name", "Maggie"], ["last_name", "Williamson"], ["updated_at", "2014-07-10 21:10:26.395068"], ["username", "leda.braun"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_2
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tutorials" ("category", "created_at", "description", "title", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["category", "et"], ["created_at", "2014-07-10 21:10:26.396927"], ["description", "Excepturi tempore sint consequuntur accusamus in et sit placeat itaque optio rem sint quo et."], ["title", "new"], ["updated_at", "2014-07-10 21:10:26.396927"], ["user_id", 279]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+Processing by TutorialsController#update as HTML
+  Parameters: {"tutorial"=>{"title"=>nil}, "id"=>"239"}
+  [1m[35mTutorial Load (0.2ms)[0m  SELECT  "tutorials".* FROM "tutorials"  WHERE "tutorials"."id" = $1 LIMIT 1  [["id", 239]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 279  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_2
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_2[0m
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 0.7ms)
+  [1m[35mTutorial Load (0.2ms)[0m  SELECT  "tutorials".* FROM "tutorials"  WHERE "tutorials"."id" = $1 LIMIT 1  [["id", 239]]
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'garett.romaguera@feeney.co.uk' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("confirmed_at", "created_at", "email", "encrypted_password", "first_name", "last_name", "updated_at", "username") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["confirmed_at", "2014-07-10 21:10:26.406768"], ["created_at", "2014-07-10 21:10:26.407860"], ["email", "garett.romaguera@feeney.co.uk"], ["encrypted_password", "$2a$04$rZDNG10BfYOS7YZKW6LLeObygIp15x1LxXMM3w3UFEwL8vkmKN7pK"], ["first_name", "Zoe"], ["last_name", "Haag"], ["updated_at", "2014-07-10 21:10:26.407860"], ["username", "hilma"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_2
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tutorials" ("category", "created_at", "description", "title", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["category", "magni"], ["created_at", "2014-07-10 21:10:26.409685"], ["description", "Magni fugit veniam omnis harum voluptates culpa temporibus recusandae dolores sequi ea nihil."], ["title", "vel"], ["updated_at", "2014-07-10 21:10:26.409685"], ["user_id", 280]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tutorials"
+Processing by TutorialsController#destroy as HTML
+  Parameters: {"id"=>"240"}
+  [1m[36mTutorial Load (0.2ms)[0m  [1mSELECT  "tutorials".* FROM "tutorials"  WHERE "tutorials"."id" = $1 LIMIT 1[0m  [["id", 240]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 280  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "tutorials" WHERE "tutorials"."id" = $1  [["id", 240]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+Redirected to http://test.host/tutorials
+Completed 302 Found in 3ms (ActiveRecord: 1.0ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "tutorials"
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
