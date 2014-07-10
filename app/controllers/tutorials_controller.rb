@@ -3,6 +3,11 @@ class TutorialsController < ApplicationController
   before_action :find_tutorial, only: [:update, :edit, :destroy, :show]
   before_action :check_tutorial_user, only: [:edit, :update, :destroy]
 
+    def search
+      q = "%#{params[:q]}%"
+      @tutorials = Tutorial.where("title like ? or description like ? or category like ?", q, q, q)
+    end
+
     def index
       @tutorials = Tutorial.all
     end
