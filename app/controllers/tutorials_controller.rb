@@ -3,13 +3,12 @@ class TutorialsController < ApplicationController
   before_action :find_tutorial, only: [:update, :edit, :destroy, :show]
   before_action :check_tutorial_user, only: [:edit, :update, :destroy]
 
-
-
     def index
       @tutorials = Tutorial.all
     end
 
     def show
+
     end
 
     def new
@@ -47,10 +46,9 @@ class TutorialsController < ApplicationController
     def check_tutorial_user
       find_tutorial
       if current_user.id != @tutorial.user_id
-        render :show
+        not_found
       end
     end
-
 
     def tutorial_params
       params.require(:tutorial).permit(:title, :description, :category, :user_id)
@@ -59,5 +57,4 @@ class TutorialsController < ApplicationController
     def find_tutorial
       @tutorial = Tutorial.find(params[:id])
     end
-
 end
