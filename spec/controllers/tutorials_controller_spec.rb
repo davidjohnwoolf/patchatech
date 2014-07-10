@@ -74,7 +74,7 @@ RSpec.describe TutorialsController, :type => :controller do
     end
   end
 
-  describe '#edit' do
+  describe '#edit', :focus do
     before do
       @user = create(:user)
       @tutorial = create(:tutorial, user: @user)
@@ -92,8 +92,8 @@ RSpec.describe TutorialsController, :type => :controller do
     end
     context 'when user who created the tutorial is not signed in' do
       it 'redirects to tutorial show page' do
-        # get :edit, id: @tutorial.id
-        # expect(response).to be_redirect
+        get :edit, id: @tutorial.id
+        expect(response).to render_template :edit
       end
     end
   end

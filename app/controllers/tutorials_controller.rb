@@ -45,8 +45,7 @@ class TutorialsController < ApplicationController
     private
 
     def check_tutorial_user
-      find_tutorial
-      if current_user.id != @tutorial.user_id
+      if current_user && (current_user.id != @tutorial.user_id)
         render :show
       end
     end
