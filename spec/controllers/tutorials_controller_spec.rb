@@ -30,9 +30,11 @@ RSpec.describe TutorialsController, :type => :controller do
   end
 
   describe '#new' do
+    before do
+      @user = create(:user)
+    end
     context 'user is signed in' do
       before do
-        @user = create(:user)
         sign_in @user
       end
       it 'sets up a new tutorial instance' do
@@ -43,17 +45,15 @@ RSpec.describe TutorialsController, :type => :controller do
       end
     end
     context 'user is not signed in' do
-      before do
-        @user = create(:user)
-      end
       it 'redirects to sign_up' do
         get :new
-        redirect_to new_user_registration_path
+        expect(response).to be_redirect
+        expect(response).to redirect_to new_user_session_path
       end
     end
   end
 
-  describe '#create', :focus do
+  describe '#create' do
     before do
       @user = create(:user)
       sign_in @user
@@ -61,7 +61,7 @@ RSpec.describe TutorialsController, :type => :controller do
     context 'when saving a proper record' do
       it 'creates a new tutorial and saves it to the db' do
         expect {
-        post :create, tutorial: { user_id: 2, title: 'a new tutorial', description: 'a tech video', category: 'apple' } # if user is signed in
+        post :create, tutorial: { user_id: 2, title: 'a new tutorial', description: 'a tech video', category: 'apple' }
       }.to change(Tutorial, :count).by(1)
       end
     end
@@ -79,17 +79,29 @@ RSpec.describe TutorialsController, :type => :controller do
       @user = create(:user)
       @tutorial = create(:tutorial, user: @user)
     end
-    it 'displays the tutorial I want to edit' do
-      get :edit, id: @tutorial.id
-      expect(response).to be_success
-      expect(assigns(:tutorial).id).to eq @tutorial.id
-      expect(response).to render_template('edit')
+    context 'when user who created the tutorial is signed in' do
+      before do
+        sign_in @user
+      end
+      it 'displays the tutorial selected to edit' do
+        get :edit, id: @tutorial.id
+        expect(response).to be_success
+        expect(assigns(:tutorial).id).to eq @tutorial.id
+        expect(response).to render_template('edit')
+      end
+    end
+    context 'when user who created the tutorial is not signed in' do
+      it 'redirects to tutorial show page' do
+        # get :edit, id: @tutorial.id
+        # expect(response).to be_redirect
+      end
     end
   end
 
   describe '#update' do
       before do
         @user = create(:user)
+        sign_in @user
         @tutorial = create(:tutorial, title: 'new', user: @user)
       end
     context 'when updateing a proper record' do
@@ -112,6 +124,7 @@ RSpec.describe TutorialsController, :type => :controller do
   describe '#destroy' do
     before do
       @user = create(:user)
+      sign_in @user
       @tutorial = create(:tutorial, user: @user)
     end
     it 'removes the tutorial from the database' do
