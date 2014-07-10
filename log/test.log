@@ -1,0 +1,38 @@
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_2
+  [1m[36mUser Exists (0.9ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'emie_stehr@gaylordcormier.name' LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("confirmed_at", "created_at", "email", "encrypted_password", "first_name", "last_name", "updated_at", "username") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["confirmed_at", "2014-07-10 21:06:57.465435"], ["created_at", "2014-07-10 21:06:57.474455"], ["email", "emie_stehr@gaylordcormier.name"], ["encrypted_password", "$2a$04$1OP0PDufUELK2tWSYAru8uGjqLruaZ90laENBtgMb0kcQYJKvqrhC"], ["first_name", "Dorris"], ["last_name", "Koepp"], ["updated_at", "2014-07-10 21:06:57.474455"], ["username", "mazie_hoeger"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_2
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tutorials" ("category", "created_at", "description", "title", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["category", "impedit"], ["created_at", "2014-07-10 21:06:57.488794"], ["description", "Sed voluptatem debitis amet dolor in voluptas doloremque id non sed quod consequuntur."], ["title", "itaque"], ["updated_at", "2014-07-10 21:06:57.488794"], ["user_id", 257]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_2
+Processing by TutorialsController#edit as HTML
+  Parameters: {"id"=>"219"}
+  [1m[36mTutorial Load (0.4ms)[0m  [1mSELECT  "tutorials".* FROM "tutorials"  WHERE "tutorials"."id" = $1 LIMIT 1[0m  [["id", 219]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 257  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered tutorials/edit.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 5.3ms | ActiveRecord: 0.9ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'andy_hessel@kovacekkuvalis.ca' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("confirmed_at", "created_at", "email", "encrypted_password", "first_name", "last_name", "updated_at", "username") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["confirmed_at", "2014-07-10 21:06:57.508853"], ["created_at", "2014-07-10 21:06:57.510354"], ["email", "andy_hessel@kovacekkuvalis.ca"], ["encrypted_password", "$2a$04$3rs.uqb7X28oFEhfSud91.Ki6xtjv8SRJn5V/FzJa7ladTjuVMf.e"], ["first_name", "Ford"], ["last_name", "Kirlin"], ["updated_at", "2014-07-10 21:06:57.510354"], ["username", "lionel_hermiston"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_2
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tutorials" ("category", "created_at", "description", "title", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["category", "aut"], ["created_at", "2014-07-10 21:06:57.512478"], ["description", "Id deleniti nesciunt explicabo et repellendus molestiae vero aliquid dolores."], ["title", "dolore"], ["updated_at", "2014-07-10 21:06:57.512478"], ["user_id", 258]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_2[0m
+Processing by TutorialsController#edit as HTML
+  Parameters: {"id"=>"220"}
+  [1m[35mTutorial Load (0.3ms)[0m  SELECT  "tutorials".* FROM "tutorials"  WHERE "tutorials"."id" = $1 LIMIT 1  [["id", 220]]
+Completed 200 OK in 5ms (Views: 0.9ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
