@@ -12,6 +12,7 @@
       <%= link_to 'Home', root_path %>
       <%= link_to 'Tutorials', tutorials_path %>
       <%= link_to 'New Tutorial', new_tutorial_path %>
+      <%= link_to 'Profile', user_path(current_user.id) %>
       <%= link_to 'Edit Account', edit_user_registration_path %>
       <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
     <% else %>
