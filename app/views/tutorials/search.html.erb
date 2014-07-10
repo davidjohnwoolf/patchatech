@@ -1,0 +1,17 @@
+<h1> Searching </h1>
+
+<%= form_tag("/search", method: "get") do %>
+  <%= label_tag(:q, "Search for:") %>
+  <%= text_field_tag(:q) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
+<ul>
+  <% @tutorials.each do |tutorial| %>
+    <li>
+      <%= tutorial.title %>
+      <%= tutorial.category %>
+      <%= tutorial.description %>
+    </li>
+  <% end %>
+</ul>
