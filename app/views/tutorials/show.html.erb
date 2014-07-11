@@ -1,10 +1,10 @@
 <h1> <%= @tutorial.title %> </h1>
 
-<p><%= @tutorial.category %></p>
+<p>Category: <%= @tutorial.category %></p>
 
-<p><%= @tutorial.user_id %></p>
+<p>Created By: <%= @user.username %></p>
 
-<p><%= @tutorial.description %></p>
+<p>Description: <%= @tutorial.description %></p>
 
   <% if user_signed_in? && @tutorial.user_id == current_user.id %>
     <%= link_to('Edit', edit_tutorial_path(@tutorial)) %>
