@@ -45,7 +45,7 @@ RSpec.describe TutorialsController, :type => :controller do
       end
     end
     context 'user is not signed in' do
-      it 'redirects to sign_up' do
+      it 'redirects to sign_in' do
         get :new
         expect(response).to be_redirect
         expect(response).to redirect_to new_user_session_path
