@@ -8,7 +8,7 @@ class TutorialsController < ApplicationController
     end
 
     def show
-
+      @user = User.find(@tutorial.user_id)
     end
 
     def new
