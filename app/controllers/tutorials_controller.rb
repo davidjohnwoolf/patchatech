@@ -50,7 +50,7 @@ class TutorialsController < ApplicationController
     end
 
     def tutorial_params
-      params.require(:tutorial).permit(:title, :description, :category, :user_id)
+      params.require(:tutorial).permit(:title, :description, :category, :user_id, :video)
     end
 
     def find_tutorial
