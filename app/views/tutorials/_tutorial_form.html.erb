@@ -23,6 +23,10 @@
     <%= f.label :category %><br>
     <%= f.select :category, [ 'Computer', 'Tablet', 'Phone' ] %>
   </div>
+  <div class="field">
+    <%= f.label :video %><br>
+    <%= f.file_field :video %>
+  </div>
   <div class="actions">
     <%= f.submit('Submit') %>
   </div>
