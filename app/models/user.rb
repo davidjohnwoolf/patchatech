@@ -6,6 +6,8 @@ class User < ActiveRecord::Base
 
   validates :email, :password, :username, presence: true
 
+  mount_uploader :picture, UserPictureUploader
+
   has_many :tutorials
 
 end
