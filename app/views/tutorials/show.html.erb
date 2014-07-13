@@ -2,7 +2,7 @@
 
 <p>Category: <%= @tutorial.category %></p>
 
-<p>Created By: <%= @user.username %></p>
+<p>Created By: <%= image_tag(@user.picture.url(:thumb)) %> <%= @user.username %></p>
 
 <p>Description: <%= @tutorial.description %></p>
 
