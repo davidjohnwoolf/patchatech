@@ -1,5 +1,5 @@
 *.rbc
-.DS-Store
+.DS_Store
 capybara-*.html
 .rspec
 /log
