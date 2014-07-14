@@ -6,6 +6,7 @@ class TutorialsController < ApplicationController
     def search
       q = "%#{params[:q]}%"
       @tutorials = Tutorial.where("title like ? or description like ? or category like ?", q, q, q)
+      @users = User.where("username like ?", q)
     end
 
     def index
