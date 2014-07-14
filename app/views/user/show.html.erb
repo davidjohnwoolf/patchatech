@@ -8,16 +8,19 @@
 
 <% if @user == current_user %>
   <%= link_to 'Edit Account', edit_user_registration_path %>
+
+  <h2>My Tutorials</h2>
+  <ul>
+  <% @tutorials.each do |t| %>
+    <li><%= link_to t.title, tutorial_path(t.id) %></li>
+  <% end %>
+  </ul>
+
+  <% else %>
+    <h2><%= @user.username %>'s Tutorials</h2>
+    <ul>
+    <% @user.tutorials.each do |t| %>
+      <li><%= link_to t.title, tutorial_path(t.id) %></li>
+    <% end %>
+    </ul>
 <% end %>
-
-<h2>Your Tutorials</h2>
-
-<ul>
-
-<% @tutorials.each do |t| %>
-
-  <li><%= link_to t.title, tutorial_path(t.id) %></li>
-
-<% end %>
-
-</ul>
