@@ -1,4 +1,5 @@
-<h1> Searching </h1>
+<h1> Search </h1>
+
 
 <%= form_tag("/search", method: "get") do %>
   <%= label_tag(:q, "Search for:") %>
@@ -6,12 +7,33 @@
   <%= submit_tag("Search") %>
 <% end %>
 
-<ul>
-  <% @tutorials.each do |tutorial| %>
+
+<% unless @tutorials.empty? %>
+  <h4> Tutorials </h4>
+  <ul>
+    <% @tutorials.each do |tutorial| %>
     <li>
-      <%= tutorial.title %>
+      <%= link_to(tutorial.title, tutorial_path(tutorial.id)) %>
       <%= tutorial.category %>
-      <%= tutorial.description %>
     </li>
-  <% end %>
-</ul>
+    <% end %>
+  </ul>
+<% else %>
+  <h4> No Tutorials Match Your Search </h4>
+<% end %>
+
+
+<% unless @users.empty? %>
+<h4> User's </h4>
+
+
+  <ul>
+    <% @users.each do |user| %>
+    <li>
+      <%= link_to(user.username, user_path(user.id)) %>
+    </li>
+    <% end %>
+  </ul>
+<% else %>
+  <h4> No User's Match Your Search </h4>
+<% end %>
