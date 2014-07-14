@@ -8,7 +8,7 @@
 
 <% if @user == current_user %>
   <%= link_to 'Edit Account', edit_user_registration_path %>
-
+  <%= link_to 'Create Tutorial', new_tutorial_path %>
   <h2>My Tutorials</h2>
   <ul>
   <% @tutorials.each do |t| %>
