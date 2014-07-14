@@ -1,0 +1,18 @@
+<h1>Contact Us</h1>
+
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+</p>
+
+<%= form_tag('/contact') do %>
+  <div><%= label_tag :name %></div>
+  <div><%= text_field_tag :name %></div>
+
+  <div><%= label_tag :email %></div>
+  <div><%= email_field_tag :email %></div>
+
+  <div><%= label_tag :comments %></div>
+  <div><%= text_area_tag :comments %></div>
+
+  <div><%= submit_tag 'Send' %></div>
+<% end %>

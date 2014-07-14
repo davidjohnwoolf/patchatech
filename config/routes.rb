@@ -7,5 +7,7 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => { registrations: 'registrations' }
 
   root 'site#index'
+  get '/about' => 'site#about'
+  get '/contact' => 'site#contact'
 
 end
