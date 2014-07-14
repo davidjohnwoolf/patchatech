@@ -10,4 +10,20 @@ RSpec.describe SiteController, :type => :controller do
     end
   end
 
+  describe '#about' do
+    it 'successfully renders site index' do
+      get :about
+      expect(response).to be_success
+      expect(response).to render_template('about')
+    end
+  end
+
+  describe '#contact' do
+    it 'successfully renders site index' do
+      get :contact
+      expect(response).to be_success
+      expect(response).to render_template('contact')
+    end
+  end
+
 end
