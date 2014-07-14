@@ -4,7 +4,8 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :confirmable, :validatable
 
-  validates :email, :password, :username, presence: true
+  validates :email, :username, presence: true
+
 
   mount_uploader :picture, UserPictureUploader
 
