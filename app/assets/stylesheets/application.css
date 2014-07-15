@@ -15,3 +15,38 @@
  *= require foundation_and_overrides
 
  */
+
+#footer{
+  margin: 0 auto;
+  width: 100%;
+  color: #9999aa;
+  display: inline;
+}
+
+#footer-lists{
+  background-color: #444444;
+  padding: 20px;
+  padding-top: 30px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.inline-list{
+  font-size: 12px;
+  list-style: none;
+}
+
+#copyright{
+  background-color: #444444;
+  padding-left: 10px;
+  color: #9999aa;
+  border-top: solid 1px;
+  border-color: #9999aa;
+  border-width: 75%;
+}
+
+#copyright p{
+  margin: 10px;
+  margin-left: 20px;
+  font-size: 12px;
+}
