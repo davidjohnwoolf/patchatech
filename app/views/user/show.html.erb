@@ -1,26 +1,28 @@
-<h1><%= @user.username %>'s Profile</h1>
+<div class="container2">
+  <h1><%= @user.username %>'s Profile</h1>
 
-<%= image_tag(@user.picture.url(:normal)) %>
-<ul>
-  <li>Name: <%= @user.first_name %> <%= @user.last_name %></li>
-  <li>Email: <%= @user.email %></li>
-</ul>
-
-<% if @user == current_user %>
-  <%= link_to 'Edit Account', edit_user_registration_path %>
-  <%= link_to 'Create Tutorial', new_tutorial_path %>
-  <h2>My Tutorials</h2>
+  <%= image_tag(@user.picture.url(:normal)) %>
   <ul>
-  <% @tutorials.each do |t| %>
-    <li><%= link_to t.title, tutorial_path(t.id) %></li>
-  <% end %>
+    <li>Name: <%= @user.first_name %> <%= @user.last_name %></li>
+    <li>Email: <%= @user.email %></li>
   </ul>
 
-  <% else %>
-    <h2><%= @user.username %>'s Tutorials</h2>
+  <% if @user == current_user %>
+    <%= link_to 'Edit Account', edit_user_registration_path %>
+    <%= link_to 'Create Tutorial', new_tutorial_path %>
+    <h2>My Tutorials</h2>
     <ul>
-    <% @user.tutorials.each do |t| %>
+    <% @tutorials.each do |t| %>
       <li><%= link_to t.title, tutorial_path(t.id) %></li>
     <% end %>
     </ul>
-<% end %>
+
+    <% else %>
+      <h2><%= @user.username %>'s Tutorials</h2>
+      <ul>
+      <% @user.tutorials.each do |t| %>
+        <li><%= link_to t.title, tutorial_path(t.id) %></li>
+      <% end %>
+      </ul>
+  <% end %>
+</div>

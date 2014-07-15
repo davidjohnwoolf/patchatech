@@ -1,18 +1,20 @@
-<h1> <%= @tutorial.title %> </h1>
+<div class="container2">
+  <h1> <%= @tutorial.title %> </h1>
 
-<p>Category: <%= @tutorial.category %></p>
+  <p>Category: <%= @tutorial.category %></p>
 
-<p>Created By: <%= image_tag(@user.picture.url(:thumb)) %> <%= @user.username %></p>
+  <p>Created By: <%= image_tag(@user.picture.url(:thumb)) %> <%= @user.username %></p>
 
-<p>Description: <%= @tutorial.description %></p>
+  <p>Description: <%= @tutorial.description %></p>
 
-<video width="640" controls>
-  <source src="<%= @tutorial.video %>" type="video/mp4">
-</video>
+  <video width="640" controls>
+    <source src="<%= @tutorial.video %>" type="video/mp4">
+  </video>
 
-<br>
+  <br>
 
   <% if user_signed_in? && @tutorial.user_id == current_user.id %>
     <%= link_to('Edit', edit_tutorial_path(@tutorial)) %>
     <%= link_to('Delete', @tutorial, method: :delete, data: { confirm: 'Are you sure?' }) %>
   <% end %>
+</div>
