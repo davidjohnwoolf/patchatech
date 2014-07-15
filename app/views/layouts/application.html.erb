@@ -12,17 +12,24 @@
   </head>
 
   <body>
+    <div class="container"
+      <header>
+        <%= render 'layouts/navbar' %>
+      </header>
+      
+      <div class="flash"
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+      </div>
 
-    <%= render 'layouts/navbar' %>
+      <span class="main-content">
+        <%= yield %>
+      </span>
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-
-    <%= yield %>
-
-    <%= render 'layouts/footer_navbar' %>
-
-    <%= javascript_include_tag "application" %>
-
+      <footer>
+        <%= render 'layouts/footer_navbar' %>
+      </footer>
+    </div>
+        <%= javascript_include_tag "application" %>
   </body>
 </html>
