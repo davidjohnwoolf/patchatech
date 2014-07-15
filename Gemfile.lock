@@ -59,6 +59,9 @@ GEM
       factory_girl (~> 4.4.0)
       railties (>= 3.0.0)
     ffaker (1.24.0)
+    foundation-rails (5.3.0.1)
+      railties (>= 3.1.0)
+      sass (>= 3.2.0)
     hike (1.2.3)
     i18n (0.6.9)
     jbuilder (2.1.1)
@@ -172,6 +175,7 @@ DEPENDENCIES
   devise
   factory_girl_rails
   ffaker
+  foundation-rails
   jbuilder (~> 2.0)
   jquery-rails
   mini_magick
