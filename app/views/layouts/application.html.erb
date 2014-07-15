@@ -1,38 +1,45 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Patchatech</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  <nav>
-    <% if signed_in? %>
-      <%= link_to 'Home', root_path %>
-      <%= link_to 'Tutorials', tutorials_path %>
-      <input type="search" name="search" placeholder="search...">
-      <%= link_to 'About', about_path %>
-      <%= link_to 'Contact', contact_path %>
-      <!-- <%= link_to 'New Tutorial', new_tutorial_path %> -->
-      <%= link_to current_user.username, user_path(current_user.id) %>
-      <!-- <%= link_to 'Edit Account', edit_user_registration_path %> -->
-      <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
-    <% else %>
-      <%= link_to 'Home', root_path %>
-      <%= link_to 'Tutorials', tutorials_path %>
-      <input type="search" name="search" placeholder="search...">
-      <%= link_to 'About', about_path %>
-      <%= link_to 'Contact', contact_path %>
-      <%= link_to 'Sign Up', new_user_registration_path %>
-      <%= link_to 'Sign In', new_user_session_path %>
-    <% end %>
-  </nav>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
 
-  <%= yield %>
+    <%= stylesheet_link_tag    "application", media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag "vendor/modernizr", 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
 
-</body>
+  <body>
+
+    <nav>
+      <% if signed_in? %>
+        <%= link_to 'Home', root_path %>
+        <%= link_to 'Tutorials', tutorials_path %>
+        <input type="search" name="search" placeholder="search...">
+        <%= link_to 'About', about_path %>
+        <%= link_to 'Contact', contact_path %>
+        <!-- <%= link_to 'New Tutorial', new_tutorial_path %> -->
+        <%= link_to current_user.username, user_path(current_user.id) %>
+        <!-- <%= link_to 'Edit Account', edit_user_registration_path %> -->
+        <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
+      <% else %>
+        <%= link_to 'Home', root_path %>
+        <%= link_to 'Tutorials', tutorials_path %>
+        <input type="search" name="search" placeholder="search...">
+        <%= link_to 'About', about_path %>
+        <%= link_to 'Contact', contact_path %>
+        <%= link_to 'Sign Up', new_user_registration_path %>
+        <%= link_to 'Sign In', new_user_session_path %>
+      <% end %>
+    </nav>
+
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
+    <%= yield %>
+    <%= javascript_include_tag "application" %>
+
+  </body>
 </html>
