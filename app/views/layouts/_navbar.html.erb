@@ -1,53 +1,52 @@
 
-
-<nav class="top-bar">
-  <ul class="title-area">
-    <li class="name"><h1><a href="/">patchaTech</a></h1></li>
-    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-  </ul>
-  <section class="top-bar-section">
-    <ul class="left">
-      <li class="divider"></li>
-      <li class="active"><a href="/tutorials">Tutorials</a></li>
-      <li class="divider"></li>
-      <li>    <input type="search" name="search" results placeholder="search..."></li>
+<div class="fixed">
+  <nav class="top-bar">
+    <ul class="title-area">
+      <li class="name"><h1><a href="/">patchaTech</a></h1></li>
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
     </ul>
+    <section class="top-bar-section">
+      <ul class="left">
+        <li class="divider"></li>
+        <li class="active"><a href="/tutorials">Tutorials</a></li>
+        <li class="divider"></li>
+        <li><input type="search" name="search" results placeholder="search..."></li>
+      </ul>
 
+      <% if signed_in? %>
+      <!-- <%= link_to 'Home', root_path %>
+      <%= link_to 'Tutorials', tutorials_path %>
+      <input type="search" name="search" placeholder="search...">
+      <%= link_to 'About', about_path %>
+      <%= link_to 'Contact', contact_path %> -->
+      <!-- <%= link_to 'New Tutorial', new_tutorial_path %> -->
+      <!-- <%= link_to current_user.username, user_path(current_user.id) %> -->
+      <!-- <%= link_to 'Edit Account', edit_user_registration_path %> -->
+      <!-- <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %> -->
 
-    <% if signed_in? %>
-    <!-- <%= link_to 'Home', root_path %>
-    <%= link_to 'Tutorials', tutorials_path %>
-    <input type="search" name="search" placeholder="search...">
-    <%= link_to 'About', about_path %>
-    <%= link_to 'Contact', contact_path %> -->
-    <!-- <%= link_to 'New Tutorial', new_tutorial_path %> -->
-    <!-- <%= link_to current_user.username, user_path(current_user.id) %> -->
-    <!-- <%= link_to 'Edit Account', edit_user_registration_path %> -->
-    <!-- <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %> -->
-
-      <ul class="right">
-        <a href=<%= user_path(current_user.id) %> class="button split"><%= current_user.username %><span data-dropdown="drop"></span></a><br>
-          <ul id="drop" class="f-dropdown" data-dropdown-content>
-            <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
-            <li><%= link_to 'Edit Account', edit_user_registration_path %></li>
-            <li><%= link_to 'New Tutorial', new_tutorial_path %></li>
-          </ul>
-        <!-- <li class="has-dropdown"><%= link_to current_user.username, user_path(current_user.id) %>
-            <ul class="dropdown">
+        <ul class="right">
+          <a href=<%= user_path(current_user.id) %> class="button split"><%= current_user.username %><span data-dropdown="drop"></span></a><br>
+            <ul id="drop" class="f-dropdown" data-dropdown-content>
               <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
               <li><%= link_to 'Edit Account', edit_user_registration_path %></li>
-              <li><%= link_to 'Create Tutorial', new_tutorial_path %></li>
+              <li><%= link_to 'New Tutorial', new_tutorial_path %></li>
             </ul>
-        </li> -->
-      </ul>
+          <!-- <li class="has-dropdown"><%= link_to current_user.username, user_path(current_user.id) %>
+              <ul class="dropdown">
+                <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
+                <li><%= link_to 'Edit Account', edit_user_registration_path %></li>
+                <li><%= link_to 'Create Tutorial', new_tutorial_path %></li>
+              </ul>
+          </li> -->
+        </ul>
 
-    <% else %>
-      <ul class="right">
-        <li><%= link_to 'Sign Up', new_user_registration_path %></li>
-        <li><%= link_to 'Sign In', new_user_session_path %></li>
-      </ul>
-    <%end%>
+      <% else %>
+        <ul class="right">
+          <li><%= link_to 'Sign Up', new_user_registration_path %></li>
+          <li><%= link_to 'Sign In', new_user_session_path %></li>
+        </ul>
+      <%end%>
 
-  </section>
-
-</nav>
+    </section>
+  </nav>
+</div>
