@@ -16,6 +16,25 @@
 
  */
 
+ #homepage{
+   height: 400px;
+   float: left;
+   width: 100%;
+   background-image: url('http://placehold.it/1200x400');
+   margin-bottom: 20px;
+ }
+
+
+#main{
+  margin: 20px;
+  width: 100%
+}
+
+
+
+
+
+
 #footer{
   margin: 0 auto;
   width: 100%;
