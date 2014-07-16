@@ -16,11 +16,22 @@
 
  */
 
+/* General Styles */
+
+ h1 {
+   border-bottom: 2px #ccc solid;
+ }
+
+ .main-content {
+   margin-bottom: 25px;
+ }
 
 /* Header Styles */
+
 #logo {
   font-size: 1.5em;
   margin-top: -2.5px;
+  border-bottom: none;
 }
 
 /* Footer Styles */
