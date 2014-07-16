@@ -2,6 +2,17 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+h3 {
+  margin-bottom: 20px;
+}
+
+h6 {
+  font-weight: 800;
+}
+
+img.profile-pic {
+}
+
 #banner {
   width: 100%;
   padding: 0;
@@ -26,4 +37,23 @@
 #main h2 {
   font-size: 1.5em;
   margin-bottom: 20px;
+}
+
+#dropdown-button {
+  text-indent: -9999px;
+  margin-right: -10px;
+}
+
+.justify {
+  text-align: justify;
+}
+
+.img-left {
+  float: left;
+  margin-right: 20px;
+}
+
+.img-right {
+  float: right;
+  margin-left: 20px;
 }
