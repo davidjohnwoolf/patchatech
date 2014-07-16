@@ -1,9 +1,10 @@
-<div class="container2">
-  <h1>Tutorials</h1>
-
-  <ul>
-    <% @tutorials.each do |t| %>
-      <li><a href="<%= tutorial_path(t.id) %>"><%= t.title %></a></li>
-    <% end %>
-  </ul>
+<div class="row">
+  <div class="large-12 columns">
+    <h1>All Tutorials</h1>
+    <ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-4">
+      <% @tutorials.each do |t| %>
+        <li><a href="<%= tutorial_path(t.id) %>"><%= image_tag(t.video_tile.thumb)%></a></li>
+      <% end %>
+    </ul>
+  </div>
 </div>

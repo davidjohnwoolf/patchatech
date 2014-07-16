@@ -24,6 +24,10 @@
     <%= f.select :category, [ 'Computer', 'Tablet', 'Phone' ] %>
   </div>
   <div class="field">
+    <%= f.label :video_tile %><br>
+    <%= f.file_field :video_tile %>
+  </div>
+  <div class="field">
     <%= f.label :video %><br>
     <%= f.file_field :video %>
   </div>
