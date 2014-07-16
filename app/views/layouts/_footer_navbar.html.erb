@@ -1,4 +1,4 @@
-<div class="row" id="footer">
+<!-- <div class="row" id="footer">
   <ul class="small-block-grid-1 medium-block-grid-3 large-block-grid-3" id="footer-lists">
     <li>
         About Us
@@ -23,4 +23,19 @@
   <div class="small-block-grid-2" id="copyright">
     <p> Copyright@ </p>
   </div>
+</div> -->
+
+<ul>
+  <li><%= link_to "Home", root_path %></li>
+  <li><%= link_to "Tutorials", tutorials_path %></li>
+  <li><%= link_to "About", about_path %></li>
+  <li class="last-item"><%= link_to "Contact", contact_path %></li>
+</ul>
+
+<div id="social-media">
+  <%= image_tag "facebook.png", alt: "Facebook" %>
+  <%= image_tag "googleplus.png", alt: "Google Plus" %>
+  <%= image_tag "twitter.png", alt: "Twitter", class: "last-item" %>
 </div>
+
+<p>Copyright &copy; 2014 Patchatech.  All Rights Reserved.</p>

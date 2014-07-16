@@ -17,59 +17,68 @@
  */
 
 
- #homepage{
-   height: 400px;
-   float: left;
-   width: 100%;
-   background-color: #44aada;
-   /* orangish #ff7f2a  purpleish #aa88dd redish #dd4c4a*/
-   margin-bottom: 20px;
- }
-#banner{
-  padding: 20px;
-  color: #eeddee;
+/* Header Styles */
+#logo {
+  font-size: 1.5em;
+  margin-top: -2.5px;
 }
 
-#banner h1{
-  color: #eeddee;
-}
+/* Footer Styles */
 
-#main{
-  margin: 20px;
-  width: 100%
-}
-
-#footer{
-  margin: 0 auto;
+footer {
   width: 100%;
-  color: #9999aa;
-  display: inline;
+  color: #999;
+  background-color: #333;
+  text-align: center;
 }
 
-#footer-lists{
-  background-color: #444444;
-  padding: 20px;
-  padding-top: 30px;
-  margin-bottom: 0px;
-  padding-bottom: 0px;
-}
-
-.inline-list{
-  font-size: 12px;
+footer ul {
+  padding: 0;
+  margin: 0;
+  padding: 20px 0;
   list-style: none;
 }
 
-#copyright{
-  background-color: #444444;
-  padding-left: 10px;
-  color: #9999aa;
-  border-top: solid 1px;
-  border-color: #9999aa;
-  border-width: 75%;
+footer li {
+  display: inline;
+  margin: 0 10px 0 0;
 }
 
-#copyright p{
-  margin: 10px;
-  margin-left: 20px;
-  font-size: 12px;
+footer li a {
+  color: #fff;
+}
+
+footer li a:hover {
+  color: #44aada;
+}
+
+footer p {
+  padding-bottom: 20px;
+  margin: 0;
+}
+
+footer #social-media {
+  margin-bottom: 20px;
+}
+
+footer #social-media img {
+  margin-right: 10px;
+}
+
+footer #social-media img.last-item {
+  margin-right: 0;
+}
+
+/* Misc Classes*/
+
+.last-item {
+  margin-right: 0;
+}
+
+.orange {
+  color: #ff9955;
+}
+
+.margin-right-20 {
+  margin-right: 20px;
 }

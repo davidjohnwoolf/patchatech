@@ -1,3 +1,25 @@
 // Place all the styles related to the site controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#homepage{
+  height: 400px;
+  float: left;
+  width: 100%;
+  background-color: #44aada;
+  /* orangish #ff7f2a  purpleish #aa88dd redish #dd4c4a*/
+  margin-bottom: 20px;
+}
+#banner{
+  padding: 20px;
+  color: #eeddee;
+}
+
+#banner h1{
+  color: #eeddee;
+}
+
+#main{
+  margin: 20px;
+  width: 100%
+}
