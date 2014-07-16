@@ -2,24 +2,28 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#homepage{
-  height: 400px;
-  float: left;
+#banner {
   width: 100%;
+  padding: 0;
+  margin: -20px 0 0 0;
   background-color: #44aada;
   /* orangish #ff7f2a  purpleish #aa88dd redish #dd4c4a*/
   margin-bottom: 20px;
 }
-#banner{
-  padding: 20px;
-  color: #eeddee;
+
+#banner p {
+  color: #eee;
+  font-size: 2.5em;
+  font-weight: 300;
+  margin: 50px 0;
 }
 
-#banner h1{
-  color: #eeddee;
+#banner img {
+  margin-top: 20px;
+  width: 500px;
 }
 
-#main{
-  margin: 20px;
-  width: 100%
+#main h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
 }
