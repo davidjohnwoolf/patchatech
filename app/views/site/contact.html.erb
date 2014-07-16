@@ -1,18 +1,43 @@
-<h1>Contact Us</h1>
+<div class="row">
+  <div class="small-12 columns">
+    <h1>Contact Us</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="small-12 medium-6 columns">
+    <div class="info">
+  <dl class="def-info">
+    <dt> Landon West</dt>
+    <dd> landonwest5@gmail.com </dd>
+    <dd> <a href="https://github.com/LandonWest"><i class="fa fa-github-square"> </i> </a> </dd>
+    <dd> <a href="https://www.linkedin.com/pub/joshua-cloward/99/61b/3b7"><i class="fa fa-linkedin-square"> </i> </a> </dd>
+    <dt> David Woolf</dt>
+    <dd> davidjohnwoolf@gmail.com </dd>
+    <dd> <a href="https://github.com/davidjohnwoolf"><i class="fa fa-github-square"> </i> </a> </dd>
+    <dd> <a href="https://www.linkedin.com/pub/joshua-cloward/99/61b/3b7"><i class="fa fa-linkedin-square"> </i> </a> </dd>
+    <dt> Joshua Cloward</dt>
+    <dd> Herrogoodbye24@gmail.com </dd>
+    <dd> <a href="https://github.com/Skewampus"><i class="fa fa-github-square"> </i> </a> </dd>
+    <dd> <a href="https://www.linkedin.com/pub/joshua-cloward/99/61b/3b7"><i class="fa fa-linkedin-square"> </i> </a> </dd>
+      <dt> </dt>
 
-<p>
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-</p>
+  </dl>
+    </div>
+  </div>
+  <div class="small-12 medium-6 columns">
+    <div class="forms">
+      <%= form_tag('/contact') do %>
+        <div><%= label_tag :name %></div>
+        <div><%= text_field_tag :name %></div>
 
-<%= form_tag('/contact') do %>
-  <div><%= label_tag :name %></div>
-  <div><%= text_field_tag :name %></div>
+        <div><%= label_tag :email %></div>
+        <div><%= email_field_tag :email %></div>
 
-  <div><%= label_tag :email %></div>
-  <div><%= email_field_tag :email %></div>
+        <div><%= label_tag :comments %></div>
+        <div><%= text_area_tag :comments %></div>
 
-  <div><%= label_tag :comments %></div>
-  <div><%= text_area_tag :comments %></div>
-
-  <div><%= submit_tag 'Send' %></div>
-<% end %>
+        <div><%= submit_tag 'Send', class: ''%></div>
+      <% end %>
+    </div>
+  </div>
+</div>
