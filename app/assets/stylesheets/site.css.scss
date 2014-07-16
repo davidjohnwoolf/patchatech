@@ -59,14 +59,16 @@ img.profile-pic {
 }
 
 /* Contact */
-.def-info{
-
-}
-
-.def-info dt{
-  
-}
-
 .def-info dd{
     margin-left: 10px;
+}
+
+.def-info dd a i{
+    color: #000;
+    font-size: 1.5em;
+}
+
+.def-info .fa-linkedin-square{
+    color: #0066aa;
+    font-size: 1.5em;
 }
