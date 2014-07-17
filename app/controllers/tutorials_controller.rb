@@ -39,7 +39,7 @@ class TutorialsController < ApplicationController
 
     def destroy
       @tutorial.destroy
-      redirect_to tutorials_path
+      redirect_to user_path(current_user.id)
     end
 
     private
