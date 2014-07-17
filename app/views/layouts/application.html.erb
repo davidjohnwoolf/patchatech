@@ -8,6 +8,7 @@
     <title><%= content_for?(:title) ? yield(:title) : "Patchatech" %></title>
 
     <%= stylesheet_link_tag    "application", media: 'all', 'data-turbolinks-track' => true %>
+    <%= favicon_link_tag "/favicon.ico" %>
     <%= javascript_include_tag "vendor/modernizr", 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
