@@ -26,7 +26,6 @@
 
       <div class="main-content">
         <%= yield %>
-        <a href="#" data-reveal-id="modal">Modal</a>
       </div>
 
       <footer>
@@ -38,10 +37,9 @@
     <div id="modal" class="reveal-modal" data-reveal>
       <h2>Title</h2>
       <p class="lead">Sub-header</p>
-      <p>Some content</p>
+      <div class="modal-content">Some content</div>
       <a class="close-reveal-modal">&#215;</a>
     </div>
 
-    <%= javascript_include_tag "application" %>
   </body>
 </html>
