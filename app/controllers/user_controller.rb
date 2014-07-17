@@ -3,7 +3,7 @@ class UserController < ApplicationController
 
   def show
       @user = User.find(params[:id])
-      @tutorials = Tutorial.where(user_id: current_user.id)
+      @tutorials = Tutorial.where(user_id: params[:id])
   end
 
 end
