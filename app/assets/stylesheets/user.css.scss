@@ -1,6 +1,4 @@
-// Place all the styles related to the user controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+/* Profile Page */
 
 h2 {
   border-bottom: 2px #ccc solid;
@@ -29,4 +27,9 @@ ul {
 .profile-info li a {
   margin: 0;
   margin-top: 10px;
+}
+
+.tutorial-option {
+  margin-top: 10px;
+  width: 98px;
 }
