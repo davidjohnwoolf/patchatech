@@ -10,4 +10,6 @@ Rails.application.routes.draw do
   get '/about' => 'site#about'
   get '/contact' => 'site#contact'
 
+  get '/search' => 'search_results#index'
+
 end
