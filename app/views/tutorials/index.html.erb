@@ -5,7 +5,7 @@
       <% @tutorials.each do |t| %>
         <li>
           <a href="<%= tutorial_path(t.id) %>"><%= image_tag(t.video_tile.thumb)%></a>
-          <div class="tile-title"><%= t.title %></div>
+          <div class="tile-title"><%= truncate(t.title, length: 21) %></div>
         </li>
       <% end %>
     </ul>
