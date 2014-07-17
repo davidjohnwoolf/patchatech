@@ -1,7 +1,32 @@
 // Place all the styles related to the user controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.container2 {
-  margin-top: 65px;
-  margin-left: 45px;
+
+h2 {
+  border-bottom: 2px #ccc solid;
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: none;
+}
+
+.profile-info li:nth-child(1) {
+  font-size: 2em;
+  font-weight: 500;
+}
+
+.profile-info li:nth-child(2), .profile-info li:nth-child(3) {
+  font-size: 1.2em;
+}
+
+.profile-info li:nth-child(4) a, .profile-info li:nth-child(5) a {
+  width: 150px;
+  background-color: #ff7f2a;
+}
+
+.profile-info li a {
+  margin: 0;
+  margin-top: 10px;
 }
