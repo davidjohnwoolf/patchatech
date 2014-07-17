@@ -17,7 +17,12 @@
         <h2>My Tutorials</h2>
         <ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-4">
           <% @tutorials.each do |t| %>
-            <li><a href="<%= tutorial_path(t.id) %>"><%= image_tag(t.video_tile.thumb)%></a></li>
+            <li>
+              <a href="<%= tutorial_path(t.id) %>"><%= image_tag(t.video_tile.thumb)%></a>
+              <div class="tile-title"><%= t.title %></div>
+              <%= link_to('Edit', edit_tutorial_path(t.id), class: "button tiny tutorial-option") %>
+              <%= link_to('Destroy', tutorial_path(t.id), method: :delete, class: "button tiny alert tutorial-option") %>
+            </li>
           <% end %>
         </ul>
 

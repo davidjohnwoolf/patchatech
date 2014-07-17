@@ -1,6 +1,4 @@
-// Place all the styles related to the site controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+/* General Styles */
 
 h3 {
   margin-bottom: 20px;
@@ -13,12 +11,13 @@ h6 {
 img.profile-pic {
 }
 
+/* Index Page */
+
 #banner {
   width: 100%;
   padding: 0;
   margin: -20px 0 0 0;
   background-color: #44aada;
-  /* orangish #ff7f2a  purpleish #aa88dd redish #dd4c4a*/
   margin-bottom: 20px;
 }
 
@@ -39,10 +38,7 @@ img.profile-pic {
   margin-bottom: 20px;
 }
 
-#dropdown-button {
-  text-indent: -9999px;
-  margin-right: -10px;
-}
+/* About Page */
 
 .justify {
   text-align: justify;
@@ -58,7 +54,8 @@ img.profile-pic {
   margin-left: 20px;
 }
 
-/* Contact */
+/* Contact Page */
+
 .def-info dd{
     margin-left: 10px;
 }
