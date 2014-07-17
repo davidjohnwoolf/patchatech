@@ -16,14 +16,12 @@
 
     <h2>Recent Tutorials</h2>
     <ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-4">
-        <li> <img src="http://placehold.it/200x200"> </li>
-        <li> <img src="http://placehold.it/200x200"> </li>
-        <li> <img src="http://placehold.it/200x200"> </li>
-        <li> <img src="http://placehold.it/200x200"> </li>
-        <li> <img src="http://placehold.it/200x200"> </li>
-        <li> <img src="http://placehold.it/200x200"> </li>
-        <li> <img src="http://placehold.it/200x200"> </li>
-        <li> <img src="http://placehold.it/200x200"> </li>
+      <% @tutorials.each do |t| %>
+        <li>
+          <a href="<%= tutorial_path(t.id) %>"><%= image_tag(t.video_tile.thumb)%></a>
+          <div class="tile-title"><%= t.title %></div>
+        </li>
+      <% end %>
     </ul>
 
   </div>
