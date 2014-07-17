@@ -1,42 +1,44 @@
-<nav class="top-bar" data-topbar>
+<div class="fixed">
+  <nav class="top-bar" data-topbar>
 
-  <ul class="title-area">
-    <li class="name"><h1 id="logo"><a href="/">patcha<span class="orange">Tech</span></a></h1></li>
-    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-  </ul>
-
-  <section class="top-bar-section">
-
-    <ul class="left">
-      <li class="divider"></li>
-      <li><a href="/tutorials">Tutorials</a></li>
-      <li class="margin-right-20 divider"></li>
-      <li><input type="search" name="search" results placeholder="&nbsp;search..."></li>
+    <ul class="title-area">
+      <li class="name"><h1 id="logo"><a href="/">patcha<span class="orange">Tech</span></a></h1></li>
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
     </ul>
 
-    <% if signed_in? %>
+    <section class="top-bar-section">
 
-      <ul class="right">
-        <li><a href="<%= user_path(current_user.id) %>"><%= current_user.username %></a></li>
+      <ul class="left">
         <li class="divider"></li>
-        <li class="has-dropdown">
-          <a id="dropdown-button" href="#">options</a>
-          <ul class="dropdown">
-            <li><%= link_to 'New Tutorial', new_tutorial_path %></li>
-            <li><%= link_to 'Edit Account', edit_user_registration_path %></li>
-            <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
-          </ul>
-        </li>
+        <li><a href="/tutorials">Tutorials</a></li>
+        <li class="margin-right-20 divider"></li>
+        <li><input type="search" name="search" results placeholder="&nbsp;search..."></li>
       </ul>
 
-    <% else %>
+      <% if signed_in? %>
 
-      <ul class="right">
-        <li><%= link_to 'Sign Up', new_user_registration_path %></li>
-        <li><%= link_to 'Sign In', new_user_session_path %></li>
-      </ul>
+        <ul class="right">
+          <li><a href="<%= user_path(current_user.id) %>"><%= current_user.username %></a></li>
+          <li class="divider"></li>
+          <li class="has-dropdown">
+            <a id="dropdown-button" href="#">options</a>
+            <ul class="dropdown">
+              <li><%= link_to 'New Tutorial', new_tutorial_path %></li>
+              <li><%= link_to 'Edit Account', edit_user_registration_path %></li>
+              <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
+            </ul>
+          </li>
+        </ul>
 
-    <% end %>
+      <% else %>
 
-  </section>
-</nav>
+        <ul class="right">
+          <li><%= link_to 'Sign Up', new_user_registration_path %></li>
+          <li><%= link_to 'Sign In', new_user_session_path %></li>
+        </ul>
+
+      <% end %>
+
+    </section>
+  </nav>
+</div>

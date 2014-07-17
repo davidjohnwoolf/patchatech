@@ -12,12 +12,17 @@
     </ul>
   </div>
 
-  <div class="large-12 columns">
-      <h2><%= @user.id == current_user.id ? "My" : "#{@user.username}'s" %> Tutorials</h2>
-    <ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-4">
 
+  <div class="large-12 columns">
+    <h2><%= @user.id == current_user.id ? "My" : "#{@user.username}'s" %> Tutorials</h2>
+      <ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-4">
         <% @tutorials.each do |tutorial| %>
-          <li><a href="<%= tutorial_path(tutorial.id) %>"><%= image_tag(tutorial.video_tile.thumb)%></a></li>
+          <li>
+            <a href="<%= tutorial_path(tutorial.id) %>"><%= image_tag(tutorial.video_tile.thumb)%></a>
+            <div class="tile-title"><%= t.title %></div>
+            <%= link_to('Edit', edit_tutorial_path(t.id), class: "button tiny tutorial-option") %>
+            <%= link_to('Destroy', tutorial_path(t.id), method: :delete, class: "button tiny alert tutorial-option") %>
+          </li>
         <% end %>
       </ul>
     </div>
