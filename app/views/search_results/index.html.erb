@@ -1,10 +1,13 @@
-<h1> Search Results for.. "<%= params[:q] %>" </h1>
-
-<ul>
-  <% @results.results.each do |result| %>
-    <li>
-      <%= result.title %>
-      <%= result.category %>
-    </li>
-  <% end %>
-</ul>
+<div class="row">
+  <div class="large-12 columns">
+  <h1> Search Results for.. "<%= params[:q] %>" </h1>
+    <ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-4">
+      <% @results.results.each do |result| %>
+        <li>
+          <a href="<%= tutorial_path(result.id) %>"><%= image_tag(result.video_tile.thumb)%></a>
+          <div class="tile-title"><%= result.title %></div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
