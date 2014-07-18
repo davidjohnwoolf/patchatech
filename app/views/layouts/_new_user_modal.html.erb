@@ -1,7 +1,7 @@
 <div id="new-user-modal" class="reveal-modal" data-reveal>
   <h2>Sign Up</h2>
   <div>
-    <%= form_for(User.new, as: :user, url: registration_path(:user)) do |f| %>
+    <%= form_for(@user, as: :user, url: registration_path(:user)) do |f| %>
 
       <div><%= f.label :first_name %><br />
       <%= f.text_field :first_name, autofocus: true %></div>
