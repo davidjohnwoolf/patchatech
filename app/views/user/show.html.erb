@@ -19,9 +19,10 @@
         <% @tutorials.each do |tutorial| %>
           <li>
             <a href="<%= tutorial_path(tutorial.id) %>"><%= image_tag(tutorial.video_tile.thumb)%></a>
-            <div class="tile-title"><%= tutorial.title %></div>
+            
+            <div class="tile-title"><%= tutorial.title, length: 21 %></div>
             <a href="#" class="button tiny tutorial-option" data-reveal-id="new-tutorial-modal">Edit</a>
-            <%= link_to('Destroy', tutorial_path(tutorial.id), method: :delete, class: "button tiny alert tutorial-option") %>
+            <%= link_to('Destroy', tutorial_path(tutorial.id), method: :delete, data: {confirm: "Are you sure?"}, class: "button tiny alert tutorial-option") %>
           </li>
         <% end %>
       </ul>

@@ -20,7 +20,7 @@ class TutorialsController < ApplicationController
       @tutorial.user_id = current_user.id
       @tutorial.title.capitalize!
       if @tutorial.save
-        redirect_to tutorials_path
+        redirect_to user_path(current_user.id)
       else
         render :new
       end
@@ -31,7 +31,7 @@ class TutorialsController < ApplicationController
 
     def update
       if @tutorial.update_attributes(tutorial_params)
-        redirect_to tutorials_path
+        redirect_to user_path(current_user.id)
       else
         render :edit
       end
@@ -39,7 +39,7 @@ class TutorialsController < ApplicationController
 
     def destroy
       @tutorial.destroy
-      redirect_to tutorials_path
+      redirect_to user_path(current_user.id)
     end
 
     private
