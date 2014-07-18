@@ -9,7 +9,7 @@
 
     <%= stylesheet_link_tag    "application", media: 'all', 'data-turbolinks-track' => true %>
     <%= favicon_link_tag "/favicon.ico" %>
-    <%= javascript_include_tag "vendor/modernizr", 'application', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag "vendor/modernizr", 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
 
@@ -39,6 +39,7 @@
     <%= render 'layouts/sign_in_modal' %>
     <%= render 'layouts/new_tutorial_modal' %>
     <%= render 'layouts/edit_tutorial_modal' %>
-
+    
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   </body>
 </html>
