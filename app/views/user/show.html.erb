@@ -7,8 +7,8 @@
       <li><%= @user.username %></li>
       <li><%= @user.first_name %> <%= @user.last_name %></li>
       <li><%= @user.email %></li>
-      <li><%= link_to 'Edit Account', edit_user_registration_path, class: "button tiny" %></li>
-      <li><%= link_to 'Create Tutorial', new_tutorial_path, class: "button tiny" %></li>
+      <li><a href="#" class="button tiny" data-reveal-id="edit-user-modal">Edit Account</a></li>
+      <li><a href="#" class="button tiny" data-reveal-id="new-tutorial-modal">Create Tutorial</a></li>
     </ul>
   </div>
 
