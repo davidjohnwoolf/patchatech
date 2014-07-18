@@ -1,0 +1,17 @@
+<div id="sign-in-modal" class="reveal-modal" data-reveal>
+
+  <h2></h2>
+
+  <div>
+    <%= form_for(@user, as: :user, url: session_path(:user)) do |f| %>
+      <div><%= f.label :email %><br />
+      <%= f.email_field :email, autofocus: true %></div>
+
+      <div><%= f.label :password %><br />
+        <%= f.password_field :password, autocomplete: "off" %></div>
+
+      <div><%= f.submit "Sign in" %></div>
+    <% end %>
+  </div>
+
+</div>

@@ -1,0 +1,34 @@
+<div id="new-user-modal" class="reveal-modal" data-reveal>
+  <h2>Sign Up</h2>
+  <div>
+    <%= form_for(@user, as: :user, url: registration_path(:user)) do |f| %>
+
+      <div><%= f.label :first_name %><br />
+      <%= f.text_field :first_name, autofocus: true %></div>
+
+      <div><%= f.label :last_name %><br />
+      <%= f.text_field :last_name %></div>
+
+      <div><%= f.label :username %><br />
+      <%= f.text_field :username %></div>
+
+      <div><%= f.label :email %><br />
+      <%= f.email_field :email %></div>
+
+      <div><%= f.label :password %><br />
+        <%= f.password_field :password, autocomplete: "off" %></div>
+
+      <div><%= f.label :password_confirmation %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
+
+      <div class="field">
+        <%= f.label :picture %><br>
+        <%= f.file_field :picture %>
+      </div>
+
+      <div><%= f.submit "Sign up" %></div>
+    <% end %>
+
+  </div>
+  <a class="close-reveal-modal">&#215;</a>
+</div>

@@ -1,0 +1,48 @@
+<div id="new-tutorial-modal" class="reveal-modal" data-reveal>
+
+  <h2>Edit Tutorial</h2>
+
+  <div>
+
+    <%= form_for(@tutorial) do |f| %>
+
+      <% if @tutorial.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@tutorial.errors.count, "error") %> prohibited this tutorial from being saved:</h2>
+          <ul>
+          <% @tutorial.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="field">
+        <%= f.label :title %><br>
+        <%= f.text_field :title %>
+      </div>
+      <div class="field">
+        <%= f.label :description %><br>
+        <%= f.text_area :description %>
+      </div>
+      <div class="field">
+        <%= f.label :category %><br>
+        <%= f.select :category, [ 'Computer', 'Tablet', 'Phone' ] %>
+      </div>
+      <div class="field">
+        <%= f.label :video_tile %><br>
+        <%= f.file_field :video_tile %>
+      </div>
+      <div class="field">
+        <%= f.label :video %><br>
+        <%= f.file_field :video %>
+      </div>
+      <div class="actions">
+        <%= f.submit('Submit') %>
+      </div>
+
+    <% end %>
+
+  </div>
+  <a class="close-reveal-modal">&#215;</a>
+</div>

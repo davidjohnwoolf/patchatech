@@ -7,8 +7,8 @@
       <li><%= @user.username %></li>
       <li><%= @user.first_name %> <%= @user.last_name %></li>
       <li><%= @user.email %></li>
-      <li><%= link_to 'Edit Account', edit_user_registration_path, class: "button tiny" %></li>
-      <li><%= link_to 'Create Tutorial', new_tutorial_path, class: "button tiny" %></li>
+      <li><a href="#" class="button tiny" data-reveal-id="edit-user-modal">Edit Account</a></li>
+      <li><a href="#" class="button tiny" data-reveal-id="new-tutorial-modal">Create Tutorial</a></li>
     </ul>
   </div>
 
@@ -19,8 +19,9 @@
         <% @tutorials.each do |tutorial| %>
           <li>
             <a href="<%= tutorial_path(tutorial.id) %>"><%= image_tag(tutorial.video_tile.thumb)%></a>
+
             <div class="tile-title"><%= truncate(tutorial.title, length: 21) %></div>
-            <%= link_to('Edit', edit_tutorial_path(tutorial.id), class: "button tiny tutorial-option") %>
+            <a href="#" class="button tiny tutorial-option" data-reveal-id="new-tutorial-modal">Edit</a>
             <%= link_to('Destroy', tutorial_path(tutorial.id), method: :delete, data: {confirm: "Are you sure?"}, class: "button tiny alert tutorial-option") %>
           </li>
         <% end %>

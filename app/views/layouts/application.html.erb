@@ -26,7 +26,6 @@
 
       <div class="main-content">
         <%= yield %>
-        <a href="#" data-reveal-id="modal">Modal</a>
       </div>
 
       <footer>
@@ -35,13 +34,11 @@
 
     </div>
 
-    <div id="modal" class="reveal-modal" data-reveal>
-      <h2>Title</h2>
-      <p class="lead">Sub-header</p>
-      <p>Some content</p>
-      <a class="close-reveal-modal">&#215;</a>
-    </div>
+    <%= render 'layouts/new_user_modal' %>
+    <%= render 'layouts/edit_user_modal' %>
+    <%= render 'layouts/sign_in_modal' %>
+    <%= render 'layouts/new_tutorial_modal' %>
+    <%= render 'layouts/edit_tutorial_modal' %>
 
-    <%= javascript_include_tag "application" %>
   </body>
 </html>
