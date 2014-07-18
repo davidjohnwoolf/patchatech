@@ -13,6 +13,35 @@ img.profile-pic {
 
 /* Index Page */
 
+.info-box-top {
+  background-color: #EEE;
+  margin-top: 35px;
+  margin-bottom: 15px;
+  text-align: center;
+  border: 1px solid #CCC;
+}
+
+.info-box-top h3 {
+  margin-top: 8px;
+  font-size: 1.5em;
+}
+
+.info-box-top img {
+  margin-top: 20px;
+  width: 8em;
+}
+
+.info-box-bottom {
+  margin-bottom: 35px;
+  color: #333;
+}
+
+.info-box-top .pencil {
+  margin: 35px 0 20px 0;
+  width: 5.5em;
+}
+
+
 #banner {
   width: 100%;
   padding: 0;
