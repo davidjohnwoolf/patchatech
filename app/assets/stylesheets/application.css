@@ -46,13 +46,13 @@ h1 {
 }
 
 .flash .notice {
-  background-color: #3BDD2C;
+  background-color: #91DE7A;
   padding: 0 10px;
   color: #fff;
 }
 
 .flash .alert {
-  background-color: #DE2C2C;
+  background-color: #F14747;
   padding: 0 10px;
   color: #fff;
 }
