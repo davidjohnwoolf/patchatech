@@ -14,7 +14,7 @@
         <li class="margin-right-20 divider"></li>
         <li>
           <%= form_tag(search_path, method: :get) do %>
-          <%= text_field_tag(:q, '', placeholder: "Search...", class: 'form-control') %>
+          <%= search_field_tag(:q, '', placeholder: "Search...", class: 'form-control') %>
         </li>
         <li>
           <span class="input-group-btn">
