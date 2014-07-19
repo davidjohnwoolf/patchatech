@@ -6,6 +6,18 @@ class Tutorial < ActiveRecord::Base
     indexes :description
   end
 
+  after_commit on: [:create] do
+    index_document
+  end
+
+  after_commit on: [:update] do
+    update_document
+  end
+
+  after_commit on: [:destroy] do
+    delete_document
+  end
+
   def self.search(params, options={})
 
      es = __elasticsearch__
