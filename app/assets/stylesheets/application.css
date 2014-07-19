@@ -17,6 +17,23 @@ h1 {
  margin: 20px 0;
 }
 
+/* Devise Styles */
+
+.sign-in-button {
+  background-color: #ff9955;
+  border: none;
+  font-size: .8em;
+  padding: 10px 25px;
+  margin-left: 0;
+  color: #fff;
+  border-radius: 2px;
+}
+
+.sign-in-button:hover {
+  background-color: #ff7f2a;
+  cursor: pointer;
+}
+
 /* Flash Styles */
 
 .flash {
@@ -100,10 +117,6 @@ footer #social-media img.last-item {
 }
 
 /* Modal Styles */
-
-.reveal-modal {
-
-}
 
 .reveal-modal input[type="submit"] {
   background-color: #ff9955;
