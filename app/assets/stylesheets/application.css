@@ -19,7 +19,7 @@ h1 {
 
 /* Devise Styles */
 
-.sign-in-button {
+.devise-submit {
   background-color: #ff9955;
   border: none;
   font-size: .8em;
@@ -29,7 +29,7 @@ h1 {
   border-radius: 2px;
 }
 
-.sign-in-button:hover {
+.devise-submit:hover {
   background-color: #ff7f2a;
   cursor: pointer;
 }
