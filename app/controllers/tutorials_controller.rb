@@ -4,7 +4,7 @@ class TutorialsController < ApplicationController
   before_action :check_tutorial_user, only: [:edit, :update, :destroy]
 
     def index
-      @tutorials = Tutorial.all
+      @tutorials = Tutorial.all.page(params[:page]).per(12)
     end
 
     def show
