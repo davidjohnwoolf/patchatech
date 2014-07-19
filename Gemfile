@@ -35,8 +35,9 @@ end
 
 #Test Gems
 group :test do
-  gem 'shoulda-matchers'
   gem 'database_cleaner'
+  gem 'shoulda-matchers'
+  gem 'simplecov', :require => false
 end
 
 #Production Gems
