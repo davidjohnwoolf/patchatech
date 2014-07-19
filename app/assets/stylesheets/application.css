@@ -11,10 +11,12 @@
 
 h1 {
  border-bottom: 2px #ccc solid;
+ margin-bottom: 20px;
 }
 
 .main-content {
  margin: 20px 0;
+ min-height: 75vh;
 }
 
 /* Devise Styles */
@@ -77,6 +79,14 @@ h1 {
 .go:hover{
   background-color: #ff7f2a;
   cursor: pointer;
+}
+
+.go:active{
+  background-color: #ff7f2a;
+}
+
+.go:visited{
+  background-color: #ff7f2a;
 }
 
 /* Footer Styles */
