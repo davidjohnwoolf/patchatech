@@ -11,4 +11,6 @@ Rails.application.routes.draw do
   get '/contact' => 'site#contact'
   post '/contact' => 'site#contact'
 
+  get '/search' => 'search_results#index'
+
 end

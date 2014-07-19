@@ -12,7 +12,16 @@
         <li class="divider"></li>
         <li><a href="/tutorials">Tutorials</a></li>
         <li class="margin-right-20 divider"></li>
-        <li><input type="search" name="search" results placeholder="&nbsp;search..."></li>
+        <li>
+          <%= form_tag(search_path, method: :get) do %>
+          <%= search_field_tag(:q, '', placeholder: "Search...", class: 'form-control') %>
+        </li>
+        <li>
+          <span class="input-group-btn">
+            <%= submit_tag('Go!', class: 'button alert tiny') %>
+          </span>
+          <% end %>
+        </li>
       </ul>
 
       <% if signed_in? %>
