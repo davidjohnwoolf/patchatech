@@ -70,6 +70,15 @@ h1 {
   margin-right: -10px;
 }
 
+.go {
+  background-color: #ff9955;
+}
+
+.go:hover{
+  background-color: #ff7f2a;
+  cursor: pointer;
+}
+
 /* Footer Styles */
 
 footer {
