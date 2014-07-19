@@ -18,17 +18,6 @@ class Tutorial < ActiveRecord::Base
         }
       }
 
-
-
-        # definition.merge!({
-        #   fuzzy: {
-        #     tutorial: {
-        #       value: params,
-        #       fuzziness: 2
-        #     }
-        #   }
-        # })
-
       response = es.search(definition)
       response
   end
