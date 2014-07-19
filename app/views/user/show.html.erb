@@ -7,8 +7,10 @@
       <li><%= @user.username %></li>
       <li><%= @user.first_name %> <%= @user.last_name %></li>
       <li><%= @user.email %></li>
-      <li><a href="#" class="button tiny" data-reveal-id="edit-user-modal">Edit Account</a></li>
-      <li><a href="#" class="button tiny" data-reveal-id="new-tutorial-modal">Create Tutorial</a></li>
+      <% if @user.id == current_user.id %>
+        <li><a href="#" class="button tiny" data-reveal-id="edit-user-modal">Edit Account</a></li>
+        <li><a href="#" class="button tiny" data-reveal-id="new-tutorial-modal">Create Tutorial</a></li>
+      <% end %>
     </ul>
   </div>
 
@@ -19,10 +21,11 @@
         <% @tutorials.each do |tutorial| %>
           <li>
             <a href="<%= tutorial_path(tutorial.id) %>"><%= image_tag(tutorial.video_tile.thumb)%></a>
-
             <div class="tile-title"><%= truncate(tutorial.title, length: 21) %></div>
-            <a href="#" class="button tiny tutorial-option" data-reveal-id="new-tutorial-modal">Edit</a>
-            <%= link_to('Destroy', tutorial_path(tutorial.id), method: :delete, data: {confirm: "Are you sure?"}, class: "button tiny alert tutorial-option") %>
+            <% if @user.id == current_user.id %>
+              <a href="#" class="button tiny tutorial-option" data-reveal-id="edit-tutorial-modal">Edit</a>
+              <%= link_to('Destroy', tutorial_path(tutorial.id), method: :delete, data: {confirm: "Are you sure?"}, class: "button tiny alert tutorial-option") %>
+            <% end %>
           </li>
         <% end %>
       </ul>
