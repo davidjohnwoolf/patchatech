@@ -8,7 +8,10 @@ class SiteController < ApplicationController
   end
 
   def contact
-
+    if request.post?
+      ContactMailer.contact_mailer(params).deliver
+      redirect_to root_path
+    end
   end
 
 end
