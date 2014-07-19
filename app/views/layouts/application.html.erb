@@ -19,9 +19,11 @@
         <%= render 'layouts/navbar' %>
       </header>
 
-      <div class="flash">
-        <p class="notice"><%= notice %></p>
-        <p class="alert"><%= alert %></p>
+      <div class="flash row">
+        <div class="large-12 columns">
+          <p class="notice flash-message"><%= notice %></p>
+          <p class="alert flash-message"><%= alert %></p>
+        </div>
       </div>
 
       <div class="main-content">
@@ -39,7 +41,7 @@
     <%= render 'layouts/sign_in_modal' %>
     <%= render 'layouts/new_tutorial_modal' %>
     <%= render 'layouts/edit_tutorial_modal' %>
-    
+
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   </body>
 </html>

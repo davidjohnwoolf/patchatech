@@ -9,13 +9,36 @@
 
 /* General Styles */
 
- h1 {
-   border-bottom: 2px #ccc solid;
- }
+h1 {
+ border-bottom: 2px #ccc solid;
+}
 
- .main-content {
-   margin-bottom: 25px;
- }
+.main-content {
+ margin: 20px 0;
+}
+
+/* Flash Styles */
+
+.flash {
+  position: relative;
+}
+
+.flash-message {
+  position: fixed;
+  top: 45px;
+}
+
+.flash .notice {
+  background-color: #3BDD2C;
+  padding: 0 10px;
+  color: #fff;
+}
+
+.flash .alert {
+  background-color: #DE2C2C;
+  padding: 0 10px;
+  color: #fff;
+}
 
 /* Header Styles */
 
