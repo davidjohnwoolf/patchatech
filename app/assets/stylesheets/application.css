@@ -41,8 +41,8 @@ h1 {
 }
 
 .flash-message {
-  position: fixed;
-  top: 45px;
+  position: absolute;
+  top: 0;
 }
 
 .flash .notice {
