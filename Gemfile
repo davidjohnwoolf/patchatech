@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.1.2'
 
 gem 'rails', '4.1.1'
 
@@ -43,3 +44,6 @@ group :test do
 end
 
 #Production Gems
+group :production do
+  gem 'rails_12factor'
+end
