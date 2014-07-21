@@ -17,7 +17,7 @@ class Tutorial < ActiveRecord::Base
   after_commit on: [:destroy] do
     delete_document
   end
-
+  
   def self.search(params, options={})
 
      es = __elasticsearch__
