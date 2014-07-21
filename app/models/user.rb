@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :confirmable, :validatable
 
   validates :email, :username, presence: true
+  validates_uniqueness_of :username
 
 
   mount_uploader :picture, UserPictureUploader
