@@ -31,5 +31,10 @@
       <div><%= f.submit "Save Changes" %></div>
     <% end %>
   </div>
+
+  <div>
+    <br><p id="cancel-text">Unhappy? We'll be sad to see you go, but you can cancel your account at anytime.<%= button_to "Cancel my account", cancel_user_registration_path, class: "", data: { confirm: "Are you sure?" }, method: :delete %></p>
+  </div>
+
   <a class="close-reveal-modal">&#215;</a>
 </div>
