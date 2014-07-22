@@ -12,13 +12,14 @@ img.profile-pic {
 }
 
 /* Index Page */
+.info-box{
+  border-right: 1px solid #999;
+}
 
 .info-box-top {
-  background-color: #EEE;
   margin-top: 35px;
   margin-bottom: 15px;
   text-align: center;
-  border: 1px solid #CCC;
 }
 
 .info-box-top h3 {
