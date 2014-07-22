@@ -22,10 +22,13 @@ class Tutorial < ActiveRecord::Base
       response
   end
 
-
-
   belongs_to :user
   validates :user_id, :title, :description, :category, :video, presence: true
   mount_uploader :video_tile, VideoTileUploader
   mount_uploader :video, TutorialVideoUploader
+
+  def set_success(format, opts)
+    self.success = true
+  end
+
 end
