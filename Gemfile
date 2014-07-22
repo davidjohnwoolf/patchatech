@@ -5,6 +5,7 @@ gem 'rails', '4.1.1'
 
 #Application Gems
 gem 'carrierwave'
+gem 'carrierwave-video'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'elasticsearch-model'
 gem 'devise'
