@@ -27,8 +27,5 @@ class Tutorial < ActiveRecord::Base
   mount_uploader :cover_photo, CoverPhotoUploader
   mount_uploader :video, TutorialVideoUploader
 
-  def set_success(format, opts)
-    self.success = true
-  end
-
+  
 end
