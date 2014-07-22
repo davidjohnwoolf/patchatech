@@ -6,6 +6,10 @@ class Tutorial < ActiveRecord::Base
     indexes :title, type: 'string', analyzer: 'simple' #, fuzziness: 2, completion: 'suggest'
     indexes :description
   end
+  belongs_to :user
+  validates :user_id, :title, :description, :category, :video, presence: true
+  mount_uploader :cover_photo, CoverPhotoUploader
+  mount_uploader :video, TutorialVideoUploader
 
   def self.search(params, options={})
      es = __elasticsearch__
@@ -22,10 +26,20 @@ class Tutorial < ActiveRecord::Base
       response
   end
 
-  belongs_to :user
-  validates :user_id, :title, :description, :category, :video, presence: true
-  mount_uploader :cover_photo, CoverPhotoUploader
-  mount_uploader :video, TutorialVideoUploader
+  def as_indexed_json(opts={})
+    as_json(
+      only: [
+        :title,
+        :description,
+        :category
+      ],
+      methods: [
+        :cover_photo,
+        :video
+      ]
+    )
+  end
 
-  
+
+
 end
