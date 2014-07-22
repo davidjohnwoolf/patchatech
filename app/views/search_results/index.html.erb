@@ -4,7 +4,7 @@
     <ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-4">
       <% @results.results.each do |result| %>
         <li>
-          <a href="<%= tutorial_path(result.id) %>"><%= image_tag(result.video_tile.thumb.url) %></a>
+          <a href="<%= tutorial_path(result.id) %>"><%= image_tag(result.cover_photo.thumb.url) %></a>
           <div class="tile-title"><%= result.title %></div>
         </li>
       <% end %>
