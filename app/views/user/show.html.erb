@@ -23,7 +23,7 @@
             <a href="<%= tutorial_path(tutorial.id) %>"><%= image_tag(tutorial.cover_photo.thumb)%></a>
             <div class="tile-title">
               <%= truncate(tutorial.title, length: 21) %>
-              <%= t.video_duration %>
+              <%= tutorial.video_duration %>
             </div>
             <% if @user.id == current_user.id %>
               <a href="#" class="button tiny tutorial-option" data-reveal-id="edit-tutorial-modal">Edit</a>

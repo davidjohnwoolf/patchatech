@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 20140722211412) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "video"
-    t.string   "video_tile"
+    t.string   "cover_photo"
     t.string   "video_duration"
   end
 
