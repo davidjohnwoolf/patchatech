@@ -33,7 +33,7 @@
 
   <div>
     <br><p id="cancel-text">Unhappy? We'll be sad to see you go, but you can cancel your account at anytime.</p>
-    <%= button_to "Cancel my account", cancel_user_registration_path, data: { confirm: "Are you sure?" }, method: :delete %>
+    <%= button_to "Cancel my account", cancel_user_registration_path, id: 'cancel-account', data: { confirm: "Are you sure?" }, method: :delete %>
   </div>
 
   <a class="close-reveal-modal">&#215;</a>
