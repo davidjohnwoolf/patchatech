@@ -3,7 +3,7 @@
   <h2>Edit Tutorial</h2>
 
   <div>
-    <% if params[:id] %>
+    <% if params[:id] && params[:controller].eql?('tutorials') %>
       <%= form_for(@this_tutorial) do |f| %>
 
         <% if @tutorial.errors.any? %>
