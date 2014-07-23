@@ -176,12 +176,17 @@ footer #social-media img.last-item {
 }
 
 .tile-title {
-  text-align: center;
+  text-align: left;
   padding-top: 5px;
+
   width: 200px;
   height: 40px;
   background: #333;
   color: #fff;
+}
+.tile-length{
+  text-align: right;
+
 }
 
 .submit-button {

@@ -21,7 +21,10 @@
         <% @tutorials.each do |tutorial| %>
           <li>
             <a href="<%= tutorial_path(tutorial.id) %>"><%= image_tag(tutorial.cover_photo.thumb)%></a>
-            <div class="tile-title"><%= truncate(tutorial.title, length: 21) %></div>
+            <div class="tile-title">
+              <%= truncate(tutorial.title, length: 21) %>
+              <%= tutorial.video_duration %>
+            </div>
             <% if @user.id == current_user.id %>
               <a href="#" class="button tiny tutorial-option" data-reveal-id="edit-tutorial-modal">Edit</a>
               <%= link_to('Delete', tutorial_path(tutorial.id), method: :delete, data: {confirm: "Are you sure?"}, class: "button tiny alert tutorial-option") %>

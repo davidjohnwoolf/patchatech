@@ -5,7 +5,10 @@
       <% @results.results.each do |result| %>
         <li>
           <a href="<%= tutorial_path(result.id) %>"><%= image_tag(result.cover_photo.cover_photo.thumb.url) %></a>
-          <div class="tile-title"><%= result.title %></div>
+          <div class="tile-title">
+            <%= result.title %>
+            <%= result.video_duration %>
+          </div>
         </li>
       <% end %>
     </ul>

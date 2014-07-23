@@ -3,12 +3,14 @@ class TutorialsController < ApplicationController
   before_action :find_tutorial, only: [:update, :edit, :destroy, :show]
   before_action :check_tutorial_user, only: [:edit, :update, :destroy]
 
+
     def index
       @tutorials = Tutorial.all.page(params[:page]).per(12)
     end
 
     def show
       @user = User.find(@tutorial.user_id)
+      @duration = @tutorial
     end
 
     def new
@@ -19,10 +21,14 @@ class TutorialsController < ApplicationController
       @tutorial = Tutorial.new(tutorial_params)
       @tutorial.user_id = current_user.id
       @tutorial.title.capitalize!
-      if @tutorial.save
-        redirect_to user_path(current_user.id)
-      else
-        render :new
+      if @tutorial.valid?
+        movie = FFMPEG::Movie.new(@tutorial.video.file.file)
+        @tutorial.video_duration = Time.at(movie.duration).strftime('%M:%S')
+        if @tutorial.save
+          redirect_to user_path(current_user.id)
+        else
+          render :new
+        end
       end
     end
 
