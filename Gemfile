@@ -4,23 +4,28 @@ ruby '2.1.2'
 gem 'rails', '4.1.1'
 
 #Application Gems
-gem 'carrierwave'
-gem 'carrierwave-video'
-gem 'videojs_rails'
+gem 'carrierwave-aws'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'elasticsearch-model'
 gem 'devise'
-gem 'foundation-rails'
-gem 'font-awesome-sass'
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
-gem 'kaminari'
-gem 'mini_magick'
+gem 'kaminari' #pagination
 gem 'pg'
-gem 'sass-rails', '~> 4.0.3'
 gem 'thin'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
+
+#Styling Gems
+gem 'foundation-rails'
+gem 'sass-rails', '~> 4.0.3'
+gem 'font-awesome-sass'
+
+#Video/Photo Gems
+gem 'mini_magick'
+gem 'carrierwave'
+gem 'carrierwave-video'
+gem 'videojs_rails'
 
 #Development Gems
 group :development do
