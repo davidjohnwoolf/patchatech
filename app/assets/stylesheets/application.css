@@ -11,11 +11,11 @@
 /*videojs play button*/
 
 .vjs-default-skin .vjs-big-play-button {
-  top: 50%!important;
-  left: 50%!important;
-  width: 120px!important;
-  height: 80px!important;
-  margin: -40px 0px 0px -60px!important;
+  top: 50% !important;
+  left: 50% !important;
+  width: 120px !important;
+  height: 80px !important;
+  margin: -40px 0px 0px -60px !important;
 }
 
 @media (screen)
