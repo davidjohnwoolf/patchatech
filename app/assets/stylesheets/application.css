@@ -161,6 +161,18 @@ footer #social-media img.last-item {
   cursor: pointer;
 }
 
+#cancel-account {
+  background-color: #fff;
+  padding: 0;
+  color: #44aada;
+  border-radius: 0;
+}
+
+#cancel-account:hover {
+  background-color: #fff;
+  text-decoration: underline;
+}
+
 /* Misc Classes*/
 
 .last-item {
