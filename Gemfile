@@ -4,7 +4,7 @@ ruby '2.1.2'
 gem 'rails', '4.1.1'
 
 #Application Gems
-gem 'fog'
+gem 'carrierwave-aws'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'elasticsearch-model'
 gem 'devise'
