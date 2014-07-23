@@ -1,7 +1,7 @@
 # encoding: utf-8
 
 class TutorialVideoUploader < CarrierWave::Uploader::Base
-  include CarrierWave::Video
+#  include CarrierWave::Video
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
   # include CarrierWave::MiniMagick
@@ -39,7 +39,7 @@ class TutorialVideoUploader < CarrierWave::Uploader::Base
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:
   def extension_white_list
-    %w(mp4 avi)
+    %w(mp4)
   end
 
   # Override the filename of the uploaded files:
@@ -47,6 +47,6 @@ class TutorialVideoUploader < CarrierWave::Uploader::Base
   # def filename
   #   "something.jpg" if original_filename
   # end
-  process encode_video: [:mp4]
+#  process encode_video: [:mp4]
     #{ after_transcode: :set_success } ]
 end
