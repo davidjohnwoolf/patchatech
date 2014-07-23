@@ -8,6 +8,6 @@ $(function(){ $(document).foundation();
 
     setTimeout(function(){
       $('.notice').fadeOut();
-    }, 1500);
+    }, 3500);
 
 });
