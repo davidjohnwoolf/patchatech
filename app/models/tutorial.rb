@@ -35,7 +35,8 @@ class Tutorial < ActiveRecord::Base
       ],
       methods: [
         :cover_photo,
-        :video
+        :video,
+        :video_duration
       ]
     )
   end
