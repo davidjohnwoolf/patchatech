@@ -24,7 +24,7 @@ gem 'font-awesome-sass'
 #Video/Photo Gems
 gem 'mini_magick'
 gem 'carrierwave'
-gem 'carrierwave-video'
+#gem 'carrierwave-video'
 gem 'videojs_rails'
 
 #Development Gems
