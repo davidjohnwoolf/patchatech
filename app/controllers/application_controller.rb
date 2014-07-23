@@ -6,6 +6,7 @@ class ApplicationController < ActionController::Base
 
   def set_modal
     @tutorial = Tutorial.new
+    @this_tutorial = Tutorial.find(params[:id]) if params[:id]
     @user = User.new
   end
 

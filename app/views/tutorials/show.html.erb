@@ -1,24 +1,23 @@
-
-  <div class="row">
-    <div class="large-12 columns">
-      <div class="video-header">
-        <h1><%= @tutorial.title %></h1>
-      </div>
+<div class="row">
+  <div class="large-12 columns">
+    <div class="video-header">
+      <h1><%= @tutorial.title %></h1>
     </div>
   </div>
-  <div class="row">
-    <div class="large-12 columns">
-      <div class="video">
-        <%= videojs_rails sources: {mp4: @tutorial.video, controls: false}, width:"100%", height: "400" %>
-      </div>
+</div>
+<div class="row">
+  <div class="large-12 columns">
+    <div class="video">
+      <%= videojs_rails sources: {mp4: @tutorial.video, controls: false}, width:"100%", height: "400" %>
     </div>
   </div>
-  <div class="row">
-    <div class="large-12 columns">
-      <div class="video-info">
-        <h6><%= @tutorial.created_at.strftime("Uploaded on %B %d,  %Y") %> </h6>
-        <p><%= @tutorial.description %></p>
-        <p>Created By: <%= link_to @user.username, @user %></p>
-      </div>
+</div>
+<div class="row">
+  <div class="large-12 columns">
+    <div class="video-info">
+      <h6><%= @tutorial.created_at.strftime("Uploaded on %B %d,  %Y") %> </h6>
+      <p><%= @tutorial.description %></p>
+      <p>Created By: <%= link_to @user.username, @user %></p>
     </div>
   </div>
+</div>

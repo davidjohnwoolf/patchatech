@@ -8,6 +8,18 @@
 
 */
 
+/*videojs play button*/
+
+.vjs-default-skin .vjs-big-play-button {
+  top: 50% !important;
+  left: 50% !important;
+  width: 120px !important;
+  height: 80px !important;
+  margin: -40px 0px 0px -60px !important;
+}
+
+@media (screen)
+
 /* General Styles */
 
 h1 {
@@ -161,6 +173,18 @@ footer #social-media img.last-item {
   cursor: pointer;
 }
 
+#cancel-account {
+  background-color: #fff;
+  padding: 0;
+  color: #44aada;
+  border-radius: 0;
+}
+
+#cancel-account:hover {
+  background-color: #fff;
+  text-decoration: underline;
+}
+
 /* Misc Classes*/
 
 .last-item {
@@ -176,7 +200,7 @@ footer #social-media img.last-item {
 }
 
 .tile-title {
-  text-align: left;
+  text-align: center;
   padding-top: 5px;
 
   width: 200px;

@@ -53,8 +53,7 @@
       <% @tutorials.each do |t| %>
         <li>
           <a href="<%= tutorial_path(t.id) %>"><%= image_tag(t.cover_photo.thumb)%></a>
-          <div class="tile-title"><%= truncate(t.title, length: 21) %>
-            <% binding.pry %>
+          <div class="tile-title"><%= truncate(t.title, length: 17) %>
             <%= t.video_duration %>
           </div>
         </li>

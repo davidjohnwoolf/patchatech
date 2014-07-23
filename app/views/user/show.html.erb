@@ -22,7 +22,7 @@
           <li>
             <a href="<%= tutorial_path(tutorial.id) %>"><%= image_tag(tutorial.cover_photo.thumb)%></a>
             <div class="tile-title">
-              <%= truncate(tutorial.title, length: 21) %>
+              <%= truncate(tutorial.title, length: 17) %>
               <%= tutorial.video_duration %>
             </div>
             <% if @user.id == current_user.id %>
