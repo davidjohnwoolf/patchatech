@@ -9,6 +9,7 @@ capybara-*.html
 /public/uploads
 /coverage/
 /spec/tmp
+.env
 **.orig
 rerun.txt
 pickle-email-*.html
