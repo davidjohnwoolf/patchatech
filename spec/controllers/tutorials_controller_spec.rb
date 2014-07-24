@@ -90,10 +90,11 @@ RSpec.describe TutorialsController, :type => :controller do
         expect(response).to render_template('edit')
       end
     end
-    context 'when user who created the tutorial is not signed in' do
-      it 'redirects to tutorial show page' do
-        get :edit, id: @tutorial.id
-        expect(response).to render_template :edit
+    context 'when the tutorial doesnt belong to current user' do
+      it 'raise routing error not found' do
+        expect {
+          get :edit, id: @tutorial.id
+        }.to raise_error(ActionController::RoutingError)
       end
     end
   end
