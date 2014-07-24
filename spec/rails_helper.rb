@@ -2,8 +2,7 @@
 ENV["RAILS_ENV"] ||= 'test'
 
 require 'simplecov'
-SimpleCov.start
-puts "required simplecov"
+SimpleCov.start 'rails'
 
 require 'spec_helper'
 require File.expand_path("../../config/environment", __FILE__)
@@ -16,6 +15,7 @@ DatabaseCleaner.strategy = :transaction
 
 
 RSpec.configure do |config|
+  config.include Devise::TestHelpers, type: :controller
   config.include FactoryGirl::Syntax::Methods
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
   config.use_transactional_fixtures = true
@@ -29,10 +29,6 @@ RSpec.configure do |config|
 
   config.after :each do
     DatabaseCleaner.clean
-  end
-
-  RSpec.configure do |config|
-    config.include Devise::TestHelpers, type: :controller
   end
 
 end
