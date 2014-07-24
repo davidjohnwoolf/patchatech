@@ -17,7 +17,7 @@
     <div class="video-info">
       <h6><%= @tutorial.created_at.strftime("Uploaded on %B %d,  %Y") %> </h6>
       <p><%= @tutorial.description %></p>
-      <p>Created By: <%= link_to @user.username, @user %></p>
+      <p>Created By: <%= link_to @user.username, user_path(@user.id) %></p>
     </div>
   </div>
 </div>

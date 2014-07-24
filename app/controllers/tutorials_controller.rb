@@ -51,8 +51,8 @@ class TutorialsController < ApplicationController
     private
 
     def check_tutorial_user
-      if current_user && (current_user.id != @tutorial.user_id)
-        render :show
+      unless current_user && (current_user.id == @tutorial.user_id)
+        not_found
       end
     end
 

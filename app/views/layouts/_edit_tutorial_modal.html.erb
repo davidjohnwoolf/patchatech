@@ -6,11 +6,11 @@
     <% if params[:id] && params[:controller].eql?('tutorials') %>
       <%= form_for(@this_tutorial) do |f| %>
 
-        <% if @tutorial.errors.any? %>
+        <% if @this_tutorial.errors.any? %>
           <div id="error_explanation">
-            <h2><%= pluralize(@tutorial.errors.count, "error") %> prohibited this tutorial from being saved:</h2>
+            <h2><%= pluralize(@this_tutorial.errors.count, "error") %> prohibited this tutorial from being saved:</h2>
             <ul>
-            <% @tutorial.errors.full_messages.each do |message| %>
+            <% @this_tutorial.errors.full_messages.each do |message| %>
               <li><%= message %></li>
             <% end %>
             </ul>
