@@ -35,14 +35,15 @@
 
     </div>
 
-  <% if current_user %>
+    <% if current_user %>
       <%= render 'layouts/new_tutorial_modal' %>
       <%= render 'layouts/edit_tutorial_modal' %>
       <%= render 'layouts/edit_user_modal' %>
-  <% else %>
-    <%= render 'layouts/sign_in_modal' %>
-    <%= render 'layouts/new_user_modal' %>
-  <% end %>
+    <% else %>
+      <%= render 'layouts/sign_in_modal' %>
+      <%= render 'layouts/new_user_modal' %>
+    <% end %>
+    
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   </body>
 </html>
