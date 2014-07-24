@@ -6,7 +6,7 @@
         <li>
           <a href="<%= tutorial_path(result.id) %>"><%= image_tag(result.cover_photo.cover_photo.thumb.url) %></a>
           <div class="tile-title">
-            <%= result.title %>
+            <%= truncate(result.title, length: 17) %>
             <%= result.video_duration %>
           </div>
         </li>
