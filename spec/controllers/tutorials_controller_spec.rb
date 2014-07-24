@@ -98,18 +98,18 @@ RSpec.describe TutorialsController, :type => :controller do
     end
   end
 
-  describe '#update' do
+  describe '#update', :focus do
       before do
         @user = create(:user)
         sign_in @user
         @tutorial = create(:tutorial, title: 'new', user: @user)
       end
-    context 'when updateing a proper record' do
+    context 'when updating a proper record' do
       it 'updates a tutorial and saves it to the db' do
         put :update, id: @tutorial.id, tutorial: {title: "updated"}
         expect(@tutorial.reload.title).to eq 'updated'
         expect(response).to be_redirect
-        expect(response).to redirect_to tutorials_path
+        expect(response).to redirect_to user_path(@user.id)
       end
     end
     context 'when the update failed' do
