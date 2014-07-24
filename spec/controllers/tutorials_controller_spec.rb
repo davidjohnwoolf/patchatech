@@ -98,7 +98,7 @@ RSpec.describe TutorialsController, :type => :controller do
     end
   end
 
-  describe '#update', :focus do
+  describe '#update' do
       before do
         @user = create(:user)
         sign_in @user
@@ -132,7 +132,7 @@ RSpec.describe TutorialsController, :type => :controller do
         delete :destroy, id: @tutorial.id
       }.to change(Tutorial, :count).from(1).to(0)
       expect(response).to be_redirect
-      expect(response).to redirect_to tutorials_path
+      expect(response).to redirect_to user_path(@user.id)
     end
   end
 end
