@@ -48,6 +48,22 @@ class TutorialsController < ApplicationController
       redirect_to user_path(current_user.id)
     end
 
+    def add_user_to_user_rated
+      @tutorial.user_rated << current_user.id
+    end
+
+    def rate_up
+      @tutorial.rating += 1
+    end
+
+    def rate_down
+      @tutorial.rating += 1
+    end
+
+    def rated?
+      @tutorial.user_rated.include?(current_user.id)
+    end
+
     private
 
     def check_tutorial_user
