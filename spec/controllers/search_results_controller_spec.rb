@@ -2,14 +2,15 @@ require 'rails_helper'
 
 RSpec.describe SearchResultsController, :type => :controller do
 
-    describe '#index' do
+    describe '#index', :focus do
       before do
         @user = create(:user)
-        @tutorials = create_list(:tutorial, 3, user: @user)
-        @search = "Test"
+        create_list(:tutorial, 3, user: @user)
+        create(:tutorial, title: 'spec', user: @user)
+        @search = "spec"
       end
 
-      it 'searching "test" and returning 1 result' do
+      it 'searching "spec" and returning 1 result' do
         get :index, {q: @search}
 
         expect(response).to be_success
