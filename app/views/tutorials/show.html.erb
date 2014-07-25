@@ -18,8 +18,12 @@
       <h6><%= @tutorial.created_at.strftime("Uploaded on %B %d,  %Y") %> </h6>
       <p><%= @tutorial.description %></p>
       <p>Created By: <%= link_to @user.username, user_path(@user.id) %></p>
-      <button class="button success">Rate Up</button>
-      <button class="button alert">Rate Down</button>
+      <%= form_tag(rate_up_path) do %>
+        <input type="submit" value="Rate Up" class="button success">
+      <% end %>
+      <%= form_tag(rate_down_path) do %>
+        <input type="submit" value="Rate Down" class="button alert">
+      <% end %>
     </div>
   </div>
 </div>
