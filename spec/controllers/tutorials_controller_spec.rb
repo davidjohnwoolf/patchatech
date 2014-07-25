@@ -53,7 +53,7 @@ RSpec.describe TutorialsController, :type => :controller do
     end
   end
 
-  describe '#create' do
+  describe '#create', :focus do
     before do
       @user = create(:user)
       sign_in @user
@@ -61,7 +61,7 @@ RSpec.describe TutorialsController, :type => :controller do
     context 'when saving a proper record' do
       it 'creates a new tutorial and saves it to the db' do
         expect {
-        post :create, tutorial: { user_id: 2, title: 'a new tutorial', description: 'a tech video', category: 'apple' }
+        post :create, tutorial: { title: 'a new tutorial', description: 'a tech video', category: 'apple' }
       }.to change(Tutorial, :count).by(1)
       end
     end
