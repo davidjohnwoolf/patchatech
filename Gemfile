@@ -8,6 +8,8 @@ gem 'carrierwave-aws'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'elasticsearch-model'
 gem 'devise'
+gem 'disqus_api'
+
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
 gem 'kaminari' #pagination
