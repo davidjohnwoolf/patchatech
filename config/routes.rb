@@ -12,5 +12,8 @@ Rails.application.routes.draw do
   post '/contact' => 'site#contact'
 
   get '/search' => 'search_results#index'
+  
+  patch '/rate_up' => 'tutorials#rate_up'
+  patch '/rate_down' => 'tutorials#rate_down'
 
 end
