@@ -40,7 +40,8 @@ class Tutorial < ActiveRecord::Base
       ]
     )
   end
-
+  
+  # Check to see if user has rated a tutorial
   def rated?
     @tutorial.user_rated.include?(current_user.id)
   end
