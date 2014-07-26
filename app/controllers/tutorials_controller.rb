@@ -49,15 +49,13 @@ class TutorialsController < ApplicationController
     end
 
     # --------- Start Rating Methods --------- #
-    def add_user_to_user_rated
-      @tutorial.user_rated << current_user.id
-    end
 
     def rate_up
       @tutorial = Tutorial.find(params[:tutorial_id])
       @user = User.find(@tutorial.user_id)
       @tutorial.rating += 1
       @tutorial.save
+      @tutorial.user_rated << current_user.id
       render :show
     end
 
@@ -66,6 +64,7 @@ class TutorialsController < ApplicationController
       @user = User.find(@tutorial.user_id)
       @tutorial.rating -= 1
       @tutorial.save
+      @tutorial.user_rated << current_user.id
       render :show
     end
     # --------- End Rating Methods --------- #
