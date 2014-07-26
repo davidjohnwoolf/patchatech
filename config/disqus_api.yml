@@ -1,9 +1,9 @@
 development:
-  api_secret: development_secret_key
-  api_key: 'public key'
-  access_token: 'token from app settings'
+  api_secret: <%= ENV['DISQUS_API_SECRET'] %>
+  api_key: <%= ENV['DISQUS_API_KEY'] %>
+  access_token: <%= ENV['DISQUS_ACCESS_TOKEN'] %>
 
 production:
-  api_secret: production_secret_key
-  api_key: 'public key'
-  access_token: 'token from app settings'
+  api_secret: <%= ENV['DISQUS_API_SECRET'] %>
+  api_key: <%= ENV['DISQUS_API_KEY'] %>
+  access_token: <%= ENV['DISQUS_ACCESS_TOKEN'] %>
