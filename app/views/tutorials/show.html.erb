@@ -19,10 +19,10 @@
       <p><%= @tutorial.description %></p>
       <p><%= @tutorial.rating %></p>
       <p>Created By: <%= link_to @user.username, user_path(@user.id) %></p>
-      <%= form_tag(rate_up_path) do %>
+      <%= form_tag(tutorial_rate_up_path(@tutorial.id), method: 'patch') do %>
         <input type="submit" value="Rate Up" class="button success">
       <% end %>
-      <%= form_tag(rate_down_path) do %>
+      <%= form_tag(tutorial_rate_down_path(@tutorial.id), method: 'patch') do %>
         <input type="submit" value="Rate Down" class="button alert">
       <% end %>
     </div>
