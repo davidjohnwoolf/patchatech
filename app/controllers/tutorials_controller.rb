@@ -54,6 +54,7 @@ class TutorialsController < ApplicationController
       @tutorial = Tutorial.find(params[:tutorial_id])
       @user = User.find(@tutorial.user_id)
       @tutorial.rating += 1
+      @tutorial.user_rated_will_change!
       @tutorial.user_rated << current_user.id
       @tutorial.save
       render :show
@@ -63,6 +64,7 @@ class TutorialsController < ApplicationController
       @tutorial = Tutorial.find(params[:tutorial_id])
       @user = User.find(@tutorial.user_id)
       @tutorial.rating -= 1
+      @tutorial.user_rated_will_change!
       @tutorial.user_rated << current_user.id
       @tutorial.save
       render :show
