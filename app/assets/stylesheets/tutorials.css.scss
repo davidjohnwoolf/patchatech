@@ -1,6 +1,5 @@
 /* Tutorial Show Page */
 
-
 .video-header {
   margin: 0;
   padding: 0;
@@ -22,5 +21,11 @@ video {
 .rate-button {
   float: right;
   margin-top: -40px;
+  margin-left: 10px;
+}
+
+.rated {
+  font-style: italic;
+  color: #999;
   margin-left: 10px;
 }
