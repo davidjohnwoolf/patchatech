@@ -4,7 +4,12 @@
       <h1>
         <%= @tutorial.title %>
         <% if rated? %>
-          <span>You rated this tutorial</span>
+          <%= form_tag(tutorial_rate_down_path(@tutorial.id), method: 'patch') do %>
+            <input type="submit" disabled value="Hate" class="button tiny alert rate-button">
+          <% end %>
+          <%= form_tag(tutorial_rate_up_path(@tutorial.id), method: 'patch') do %>
+            <input type="submit" disabled value="Like" class="button tiny success rate-button">
+          <% end %>
         <% else %>
           <%= form_tag(tutorial_rate_down_path(@tutorial.id), method: 'patch') do %>
             <input type="submit" value="Hate" class="button tiny alert rate-button">
@@ -29,7 +34,10 @@
     <div class="video-info">
       <h6><%= @tutorial.created_at.strftime("Uploaded on %B %d,  %Y") %> </h6>
       <p><%= @tutorial.description %></p>
-      <p>Rating: <%= @tutorial.rating %></p>
+      <p>
+        Rating: <%= @tutorial.rating %>
+        <% if rated? %><span class="rated">You rated this</span><% end %>
+      </p>
       <p>Created By: <%= link_to @user.username, user_path(@user.id) %></p>
     </div>
   </div>
