@@ -20,10 +20,10 @@
       <div class="rate-buttons">
         <% if user_signed_in? && rated? %>
           <%= form_tag(tutorial_rate_up_path(@tutorial.id), method: 'patch') do %>
-            <input type="submit" disabled value="Rate Up" class="button tiny success rate-button">
+            <input type="submit" disabled value="Rate Up" class="button tiny success success alert-box rate-button">
           <% end %>
           <%= form_tag(tutorial_rate_down_path(@tutorial.id), method: 'patch') do %>
-            <input type="submit" disabled value="Rate Down" class="button tiny alert rate-button">
+            <input type="submit" disabled value="Rate Down" class="button tiny alert alert-box rate-button">
           <% end %>
         <% elsif user_signed_in? %>
           <%= form_tag(tutorial_rate_up_path(@tutorial.id), method: 'patch') do %>
@@ -35,7 +35,7 @@
         <% end %>
       </div>
       <p class="tut-rating">
-        <span>Rating</span>
+        <span>Rating: </span>
         <%= @tutorial.rating %>
       </p>
       <h6 class="created-at">
