@@ -3,21 +3,21 @@
     <div class="video-header">
       <h1>
         <%= @tutorial.title %>
-        <% if rated? %>
-          <%= form_tag(tutorial_rate_down_path(@tutorial.id), method: 'patch') do %>
-            <input type="submit" disabled value="Hate" class="button tiny alert rate-button">
+          <% if user_signed_in? && rated? %>
+            <%= form_tag(tutorial_rate_down_path(@tutorial.id), method: 'patch') do %>
+              <input type="submit" disabled value="Hate" class="button tiny alert rate-button">
+            <% end %>
+            <%= form_tag(tutorial_rate_up_path(@tutorial.id), method: 'patch') do %>
+              <input type="submit" disabled value="Like" class="button tiny success rate-button">
+            <% end %>
+          <% elsif user_signed_in? %>
+            <%= form_tag(tutorial_rate_down_path(@tutorial.id), method: 'patch') do %>
+              <input type="submit" value="Hate" class="button tiny alert rate-button">
+            <% end %>
+            <%= form_tag(tutorial_rate_up_path(@tutorial.id), method: 'patch') do %>
+              <input type="submit" value="Like" class="button tiny success rate-button">
+            <% end %>
           <% end %>
-          <%= form_tag(tutorial_rate_up_path(@tutorial.id), method: 'patch') do %>
-            <input type="submit" disabled value="Like" class="button tiny success rate-button">
-          <% end %>
-        <% else %>
-          <%= form_tag(tutorial_rate_down_path(@tutorial.id), method: 'patch') do %>
-            <input type="submit" value="Hate" class="button tiny alert rate-button">
-          <% end %>
-          <%= form_tag(tutorial_rate_up_path(@tutorial.id), method: 'patch') do %>
-            <input type="submit" value="Like" class="button tiny success rate-button">
-          <% end %>
-        <% end %>
       </h1>
     </div>
   </div>
@@ -36,7 +36,7 @@
       <p><%= @tutorial.description %></p>
       <p>
         Rating: <%= @tutorial.rating %>
-        <% if rated? %><span class="rated">You rated this</span><% end %>
+        <% if user_signed_in? && rated? %><span class="rated">You rated this tutorial already</span><% end %>
       </p>
       <p>Created By: <%= link_to @user.username, user_path(@user.id) %></p>
     </div>
