@@ -3,21 +3,6 @@
     <div class="video-header">
       <h1>
         <%= @tutorial.title %>
-          <% if user_signed_in? && rated? %>
-            <%= form_tag(tutorial_rate_down_path(@tutorial.id), method: 'patch') do %>
-              <input type="submit" disabled value="Hate" class="button tiny alert rate-button">
-            <% end %>
-            <%= form_tag(tutorial_rate_up_path(@tutorial.id), method: 'patch') do %>
-              <input type="submit" disabled value="Like" class="button tiny success rate-button">
-            <% end %>
-          <% elsif user_signed_in? %>
-            <%= form_tag(tutorial_rate_down_path(@tutorial.id), method: 'patch') do %>
-              <input type="submit" value="Hate" class="button tiny alert rate-button">
-            <% end %>
-            <%= form_tag(tutorial_rate_up_path(@tutorial.id), method: 'patch') do %>
-              <input type="submit" value="Like" class="button tiny success rate-button">
-            <% end %>
-          <% end %>
       </h1>
     </div>
   </div>
@@ -32,15 +17,44 @@
 <div class="row">
   <div class="large-12 columns">
     <div class="video-info">
-      <h6><%= @tutorial.created_at.strftime("Uploaded on %B %d,  %Y") %> </h6>
-      <p><%= @tutorial.description %></p>
-      <p>
-        Rating: <%= @tutorial.rating %>
+        <% if user_signed_in? && rated? %>
+        <div class="rate-buttons" data-reveal-id="already-rated">
+          <%= form_tag(tutorial_rate_up_path(@tutorial.id), method: 'patch') do %>
+            <input type="submit" disabled value="Rate Up" class="button tiny success success rate-button">
+          <% end %>
+          <%= form_tag(tutorial_rate_down_path(@tutorial.id), method: 'patch') do %>
+            <input type="submit" data-reveal-id="myModal" disabled value="Rate Down" class="button tiny alert rate-button">
+          <% end %>
+        <% elsif user_signed_in? %>
+        <div class="rate-buttons">
+          <%= form_tag(tutorial_rate_up_path(@tutorial.id), method: 'patch') do %>
+            <input type="submit" value="Rate Up" class="button tiny success rate-button">
+          <% end %>
+          <%= form_tag(tutorial_rate_down_path(@tutorial.id), method: 'patch') do %>
+            <input type="submit" value="Rate Down" class="button tiny alert rate-button">
+          <% end %>
+        <% end %>
+      </div>
+      <p class="tut-rating">
+        <span>Rating: </span>
+        <%= @tutorial.rating %>
+      </p>
+      <h6 class="created-at">
+        <%= @tutorial.created_at.strftime("Uploaded on %B %d,  %Y") %>
+      </h6>
+      <p class="user-rated">
         <% if user_signed_in? && rated? %><span class="rated">You rated this tutorial already</span><% end %>
       </p>
+      <p><%= @tutorial.description %></p>
       <p>Created By: <%= link_to @user.username, user_path(@user.id) %></p>
     </div>
   </div>
+</div>
+
+<div id="already-rated" class="reveal-modal small" data-reveal>
+  <h2>You Already Rated this Tutorial</h2>
+  <p>You can only rate each tutorial once.</p>
+  <a class="close-reveal-modal">&#215;</a>
 </div>
 
 <%= render 'disqus' %>
