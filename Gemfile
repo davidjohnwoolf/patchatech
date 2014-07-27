@@ -15,7 +15,6 @@ gem 'pg'
 gem 'thin'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
-gem 'sidekiq'
 
 #Styling Gems
 gem 'foundation-rails'
