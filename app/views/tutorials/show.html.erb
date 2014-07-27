@@ -17,29 +17,33 @@
 <div class="row">
   <div class="large-12 columns">
     <div class="video-info">
+      <div class="rate-buttons">
         <% if user_signed_in? && rated? %>
           <%= form_tag(tutorial_rate_up_path(@tutorial.id), method: 'patch') do %>
-            <input type="submit" disabled value="Love" class="button tiny success rate-button">
+            <input type="submit" disabled value="Rate Up" class="button tiny success rate-button">
           <% end %>
           <%= form_tag(tutorial_rate_down_path(@tutorial.id), method: 'patch') do %>
-            <input type="submit" disabled value="Hate" class="button tiny alert rate-button">
+            <input type="submit" disabled value="Rate Down" class="button tiny alert rate-button">
           <% end %>
         <% elsif user_signed_in? %>
           <%= form_tag(tutorial_rate_up_path(@tutorial.id), method: 'patch') do %>
-            <input type="submit" value="Love" class="button tiny success rate-button">
+            <input type="submit" value="Rate Up" class="button tiny success rate-button">
           <% end %>
           <%= form_tag(tutorial_rate_down_path(@tutorial.id), method: 'patch') do %>
-            <input type="submit" value="Hate" class="button tiny alert rate-button">
+            <input type="submit" value="Rate Down" class="button tiny alert rate-button">
           <% end %>
         <% end %>
+      </div>
       <p class="tut-rating">
         <span>Rating</span>
         <%= @tutorial.rating %>
-        <% if user_signed_in? && rated? %><span class="rated">You rated this tutorial already</span><% end %>
       </p>
-      <h6>
+      <h6 class="created-at">
         <%= @tutorial.created_at.strftime("Uploaded on %B %d,  %Y") %>
       </h6>
+      <p class="user-rated">
+        <% if user_signed_in? && rated? %><span class="rated">You rated this tutorial already</span><% end %>
+      </p>
       <p><%= @tutorial.description %></p>
       <p>Created By: <%= link_to @user.username, user_path(@user.id) %></p>
     </div>
