@@ -11,3 +11,9 @@ $(function(){ $(document).foundation();
     }, 3500);
 
 });
+
+$('#upload-load').hide();
+$('.tuts-submit').on('click', function(){
+  $(this).hide();
+  $('#upload-load').show();
+});

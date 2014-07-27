@@ -5,8 +5,9 @@
  *= require foundation_and_overrides
  *= require font-awesome
  *= require video-js
-
+ *= require spinning_circle
 */
+
 
 /*videojs play button*/
 
@@ -221,4 +222,10 @@ footer #social-media img.last-item {
 .submit-button:hover {
   background-color: #ff7f2a;
   cursor: pointer;
+}
+
+#upload-load p, #upload-load div{
+  float: left;
+  margin-right: 10px;
+  margin-top: 10px;
 }

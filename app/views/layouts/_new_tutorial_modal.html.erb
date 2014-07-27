@@ -37,9 +37,15 @@
         <%= f.label :video %><br>
         <%= f.file_field :video %>
       </div>
-      <div class="actions">
+
+      <div class="actions tuts-submit">
         <%= f.submit('Submit') %>
       </div>
+      <div id="upload-load">
+        <div class='loading'></div>
+        <p> Please wait while video uploads. This could take awhile... </p>
+      </div>
+
 
     <% end %>
 
