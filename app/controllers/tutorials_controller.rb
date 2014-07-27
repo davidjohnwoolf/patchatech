@@ -55,9 +55,9 @@ class TutorialsController < ApplicationController
       @user = User.find(@tutorial.user_id)
       @tutorial.rating += 1
       @tutorial.user_rated_will_change!
-      @tutorial.user_rated << current_user.id
+      @tutorial.user_rated << current_user.id.to_s
       @tutorial.save
-      render :show
+      redirect_to tutorial_path(@tutorial.id)
     end
 
     def rate_down
@@ -65,9 +65,9 @@ class TutorialsController < ApplicationController
       @user = User.find(@tutorial.user_id)
       @tutorial.rating -= 1
       @tutorial.user_rated_will_change!
-      @tutorial.user_rated << current_user.id
+      @tutorial.user_rated << current_user.id.to_s
       @tutorial.save
-      render :show
+      redirect_to tutorial_path(@tutorial.id)
     end
     # --------- End Rating Methods --------- #
 
