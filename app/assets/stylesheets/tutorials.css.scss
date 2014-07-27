@@ -2,12 +2,31 @@
 
 .tile-title {
   padding: 10px;
-  border: 2px #ccc solid;
+  border-left: 1px #ccc solid;
+  border-right: 1px #ccc solid;
+  border-bottom: 1px #ccc solid;
   max-width: 200px;
-  color: #44aada;
+  background-color: #eee;
+  color: #333;
 }
 
+.tile-title div {
+  font-size: .9em;
+  display: inline;
+  margin-right: 5px;
+}
 
+.tile-title h5 {
+  margin: 5px 0;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.blue {
+  color: #44aada;
+}
 
 /* Tutorial Show Page */
 
