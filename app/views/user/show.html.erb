@@ -20,11 +20,14 @@
       <ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-4">
         <% @tutorials.each do |tutorial| %>
           <li>
-            <a href="<%= tutorial_path(tutorial.id) %>"><%= image_tag(tutorial.cover_photo.thumb)%></a>
-            <div class="tile-title">
-              <%= truncate(tutorial.title, length: 17) %>
-          
-            </div>
+            <a href="<%= tutorial_path(tutorial.id) %>">
+              <%= image_tag(tutorial.cover_photo.thumb)%>
+              <div class="tile-title">
+                <h5 class="bold"><%= truncate(tutorial.title, length: 20) %></h5>
+                <div><%= tutorial.created_at.strftime('%F') %></div>
+                <div class="blue">Rating <%= tutorial.rating %></div>
+              </div>
+            </a>
             <% if @user.id == current_user.id %>
               <a href="<%= edit_tutorial_path(tutorial.id) %>" class="button tiny tutorial-option">Edit</a>
               <%= link_to('Delete', tutorial_path(tutorial.id), method: :delete, data: {confirm: "Are you sure?"}, class: "button tiny alert tutorial-option") %>
