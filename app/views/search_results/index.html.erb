@@ -4,11 +4,12 @@
     <ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-4">
       <% @results.results.each do |result| %>
         <li>
-          <a href="<%= tutorial_path(result.id) %>"><%= image_tag(result.cover_photo.cover_photo.thumb.url) %></a>
-          <div class="tile-title">
-            <%= truncate(result.title, length: 17) %>
-
-          </div>
+          <a href="<%= tutorial_path(result.id) %>">
+            <%= image_tag(result.cover_photo.cover_photo.thumb.url) %>
+            <div class="tile-title">
+              <h5 class="bold"><%= truncate(result.title, length: 20) %></h5>
+            </div>
+          </a>
         </li>
       <% end %>
     </ul>
