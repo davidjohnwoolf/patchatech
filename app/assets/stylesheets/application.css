@@ -19,8 +19,6 @@
   margin: -40px 0px 0px -60px !important;
 }
 
-
-
 /* General Styles */
 
 h1 {
@@ -198,15 +196,6 @@ footer #social-media img.last-item {
 
 .margin-right-20 {
   margin-right: 20px;
-}
-
-.tile-title {
-  text-align: center;
-  padding-top: 5px;
-  max-width: 200px;
-  height: 40px;
-  background: #333;
-  color: #fff;
 }
 
 .submit-button {
