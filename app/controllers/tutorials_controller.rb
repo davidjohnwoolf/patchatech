@@ -48,6 +48,29 @@ class TutorialsController < ApplicationController
       redirect_to user_path(current_user.id)
     end
 
+    # --------- Start Rating Methods --------- #
+
+    def rate_up
+      @tutorial = Tutorial.find(params[:tutorial_id])
+      @user = User.find(@tutorial.user_id)
+      @tutorial.rating += 1
+      @tutorial.user_rated_will_change!
+      @tutorial.user_rated << current_user.id.to_s
+      @tutorial.save
+      redirect_to tutorial_path(@tutorial.id)
+    end
+
+    def rate_down
+      @tutorial = Tutorial.find(params[:tutorial_id])
+      @user = User.find(@tutorial.user_id)
+      @tutorial.rating -= 1
+      @tutorial.user_rated_will_change!
+      @tutorial.user_rated << current_user.id.to_s
+      @tutorial.save
+      redirect_to tutorial_path(@tutorial.id)
+    end
+    # --------- End Rating Methods --------- #
+
     private
 
     def check_tutorial_user
@@ -57,7 +80,7 @@ class TutorialsController < ApplicationController
     end
 
     def tutorial_params
-      params.require(:tutorial).permit(:title, :description, :category, :user_id, :video, :cover_photo)
+      params.require(:tutorial).permit(:title, :description, :category, :user_id, :video, :cover_photo, :rating, :user_rated)
     end
 
     def find_tutorial
