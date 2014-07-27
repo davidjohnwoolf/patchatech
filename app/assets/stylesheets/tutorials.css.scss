@@ -19,13 +19,21 @@ video {
 }
 
 .rate-button {
-  float: right;
-  margin-top: -40px;
-  margin-left: 10px;
+  float: left;
+  margin: -5px 10px 0 0;
 }
 
 .rated {
   font-style: italic;
   color: #999;
   margin-left: 10px;
+}
+
+.tut-rating {
+  clear: both;
+  margin-top: 20px;
+}
+
+.tut-rating span {
+  font-weight: bold;
 }
