@@ -11,6 +11,10 @@ class Tutorial < ActiveRecord::Base
   mount_uploader :cover_photo, CoverPhotoUploader
   mount_uploader :video, TutorialVideoUploader
 
+  # def cover_photo_changed!
+  #
+  # end
+
   def self.search(params, options={})
      es = __elasticsearch__
        definition = {
