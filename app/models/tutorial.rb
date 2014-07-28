@@ -26,6 +26,10 @@ class Tutorial < ActiveRecord::Base
       response
   end
 
+  def cover_photo_changed?
+    changed.include?("cover_photo")
+  end
+
   def as_indexed_json(opts={})
     as_json(
       only: [
