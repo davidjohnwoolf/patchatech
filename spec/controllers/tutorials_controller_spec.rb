@@ -53,7 +53,7 @@ RSpec.describe TutorialsController, :type => :controller do
     end
   end
 
-  describe '#create', :focus do
+  describe '#create' do
     before do
       @user = create(:user)
       sign_in @user
