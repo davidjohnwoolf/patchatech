@@ -55,7 +55,7 @@
           <a href="<%= tutorial_path(t.id) %>">
             <%= image_tag(t.cover_photo.thumb)%>
             <div class="tile-title">
-              <h5 class="bold"><%= truncate(t.title, length: 20) %></h5>
+              <h5 class="bold truncate"><%= t.title %></h5>
               <div><%= t.created_at.strftime('%F') %></div>
               <% if t.rating > 0 %>
               <div class="green">Rating <%= t.rating %></div>
