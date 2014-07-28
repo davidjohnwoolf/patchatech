@@ -20,7 +20,7 @@
         <% if user_signed_in? && rated? %>
           <div class="rate-buttons" data-reveal-id="already-rated">
           <%= form_tag(tutorial_rate_up_path(@tutorial.id), method: 'patch') do %>
-            <input type="submit" disabled value="Rate Up" class="button tiny success success rate-button">
+            <input type="submit" disabled value="Rate Up" class="button tiny success rate-button">
           <% end %>
           <%= form_tag(tutorial_rate_down_path(@tutorial.id), method: 'patch') do %>
             <input type="submit" data-reveal-id="myModal" disabled value="Rate Down" class="button tiny alert rate-button">
