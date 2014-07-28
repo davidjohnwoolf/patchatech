@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe SearchResultsController, :type => :controller do
 
-    describe '#index', :focus do
+    describe '#index' do
       before do
         @user = create(:user)
         create_list(:tutorial, 3, user: @user)
