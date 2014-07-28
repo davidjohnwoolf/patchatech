@@ -18,7 +18,7 @@
   <div class="large-12 columns">
     <div class="video-info">
         <% if user_signed_in? && rated? %>
-          <div class="rate-buttons" data-reveal-id="already-rated">
+          <div data-reveal-id="already-rated">
           <%= form_tag(tutorial_rate_up_path(@tutorial.id), method: 'patch') do %>
             <input type="submit" disabled value="Rate Up" class="button tiny success success rate-button">
           <% end %>
@@ -26,7 +26,7 @@
             <input type="submit" data-reveal-id="myModal" disabled value="Rate Down" class="button tiny alert rate-button">
           <% end %>
         <% elsif user_signed_in? %>
-          <div class="rate-buttons">
+          <div>
           <%= form_tag(tutorial_rate_up_path(@tutorial.id), method: 'patch') do %>
             <input type="submit" value="Rate Up" class="button tiny success rate-button">
           <% end %>
