@@ -45,3 +45,9 @@ ul {
 #profile-page .delete-hover:hover {
   background-color: #d40000;
 }
+
+@media only screen and (max-width: 40em) {
+  .tutorial-option {
+    width: auto;
+  }
+}
