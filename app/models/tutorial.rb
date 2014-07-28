@@ -2,15 +2,17 @@ class Tutorial < ActiveRecord::Base
   include Elasticsearch::Model
   include Elasticsearch::Model::Callbacks
 
+  attr_accessor :cover_photo
+
   mapping do
     indexes :title, type: 'string', analyzer: 'simple' #, fuzziness: 2, completion: 'suggest'
     indexes :description
   end
-  belongs_to :user
   validates :user_id, :title, :description, :category, :video, presence: true
   mount_uploader :cover_photo, CoverPhotoUploader
   mount_uploader :video, TutorialVideoUploader
 
+  belongs_to :user
   # def cover_photo_changed!
   #
   # end
