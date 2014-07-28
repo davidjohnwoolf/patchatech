@@ -7,7 +7,7 @@
           <a href="<%= tutorial_path(result.id) %>">
             <%= image_tag(result.cover_photo.cover_photo.thumb.url) %>
             <div class="tile-title">
-              <h5 class="bold"><%= truncate(result.title, length: 18) %></h5>
+              <h5 class="bold truncate"><%= result.title %></h5>
             </div>
           </a>
         </li>
