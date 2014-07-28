@@ -33,7 +33,6 @@ class TutorialsController < ApplicationController
 
     def update
       if @tutorial.update_attributes(tutorial_params)
-        @tutorial.cover_photo_will_change!
         redirect_to user_path(current_user.id)
       else
         render :edit
