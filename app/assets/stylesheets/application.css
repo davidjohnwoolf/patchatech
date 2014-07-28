@@ -190,8 +190,24 @@ footer #social-media img.last-item {
   margin-right: 0;
 }
 
+.bold {
+  font-weight: bold;
+}
+
 .orange {
   color: #ff9955;
+}
+
+.blue {
+  color: #44aada;
+}
+
+.green {
+  color: #71c837;
+}
+
+.red {
+  color: red;
 }
 
 .margin-right-20 {
@@ -217,4 +233,26 @@ footer #social-media img.last-item {
   float: left;
   margin-right: 10px;
   margin-top: 10px;
+}
+
+/* Tutorial Thumbnail Styles*/
+
+.tile-title {
+  padding: 10px;
+  border-left: 1px #ccc solid;
+  border-right: 1px #ccc solid;
+  border-bottom: 1px #ccc solid;
+  max-width: 200px;
+  background-color: #eee;
+  color: #333;
+}
+
+.tile-title div {
+  font-size: .9em;
+  display: inline;
+  margin-right: 5px;
+}
+
+.tile-title h5 {
+  margin: 5px 0;
 }
