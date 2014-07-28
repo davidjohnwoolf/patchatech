@@ -45,6 +45,12 @@ video {
   float: right;
 }
 
+.sign-in-to-rate {
+  margin-top: -15px;
+  font-style: italic;
+  color: #999;
+}
+
 @media only screen and (max-width: 40em) {
   .created-at {
     float: left;

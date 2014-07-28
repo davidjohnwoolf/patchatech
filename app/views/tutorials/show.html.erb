@@ -43,7 +43,11 @@
         <%= @tutorial.created_at.strftime("Uploaded on %B %d,  %Y") %>
       </h6>
       <p class="user-rated">
-        <% if user_signed_in? && rated? %><span class="rated">You rated this tutorial already</span><% end %>
+        <% if user_signed_in? && rated? %>
+          <span class="rated">You rated this tutorial already</span>
+        <% elsif user_signed_in? == false %>
+          <span class="sign-in-to-rate">Sign In or Sign Up to rate this Tutorial</span>
+        <% end %>
       </p>
       <p><%= @tutorial.description %></p>
       <p>Created By: <%= link_to @user.username, user_path(@user.id) %></p>
