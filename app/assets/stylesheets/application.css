@@ -19,8 +19,6 @@
   margin: -40px 0px 0px -60px !important;
 }
 
-
-
 /* General Styles */
 
 h1 {
@@ -192,21 +190,28 @@ footer #social-media img.last-item {
   margin-right: 0;
 }
 
+.bold {
+  font-weight: bold;
+}
+
 .orange {
   color: #ff9955;
 }
 
-.margin-right-20 {
-  margin-right: 20px;
+.blue {
+  color: #44aada;
 }
 
-.tile-title {
-  text-align: center;
-  padding-top: 5px;
-  max-width: 200px;
-  height: 40px;
-  background: #333;
-  color: #fff;
+.green {
+  color: #71c837;
+}
+
+.red {
+  color: #d40000;
+}
+
+.margin-right-20 {
+  margin-right: 20px;
 }
 
 .submit-button {
@@ -228,4 +233,33 @@ footer #social-media img.last-item {
   float: left;
   margin-right: 10px;
   margin-top: 10px;
+}
+
+/* Tutorial Thumbnail Styles*/
+
+.tile-title {
+  padding: 10px;
+  border-left: 1px #ccc solid;
+  border-right: 1px #ccc solid;
+  border-bottom: 1px #ccc solid;
+  max-width: 200px;
+  background-color: #eee;
+  color: #333;
+}
+
+.tile-title div {
+  font-size: .9em;
+  display: inline;
+  margin-right: 5px;
+}
+
+.tile-title #truncate  {
+  margin: 5px 0;
+}
+
+.truncate {
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

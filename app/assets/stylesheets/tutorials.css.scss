@@ -30,10 +30,17 @@ video {
 }
 
 .tut-rating {
-  clear: both;
-  margin-top: 20px;
+  float: left;
 }
 
 .tut-rating span {
   font-weight: bold;
+}
+
+.user-rated {
+  clear: both;
+}
+
+.created-at {
+  float: right;
 }

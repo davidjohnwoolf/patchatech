@@ -4,10 +4,20 @@
     <ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-4">
       <% @tutorials.each do |t| %>
         <li>
-          <a href="<%= tutorial_path(t.id) %>"><%= image_tag(t.cover_photo.thumb)%></a>
-          <div class="tile-title">
-            <%= truncate(t.title, length: 17) %>
-          </div>
+          <a href="<%= tutorial_path(t.id) %>">
+            <%= image_tag(t.cover_photo.thumb)%>
+            <div class="tile-title">
+              <h5 class="bold truncate"><%= t.title %></h5>
+              <div><%= t.created_at.strftime('%F') %></div>
+              <% if t.rating > 0 %>
+              <div class="green">Rating <%= t.rating %></div>
+              <% elsif t.rating < 0 %>
+              <div class="red">Rating <%= t.rating %></div>
+              <% else %>
+                <div>Rating <%= t.rating %></div>
+              <% end %>
+            </div>
+          </a>
         </li>
       <% end %>
     </ul>

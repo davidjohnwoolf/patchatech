@@ -10,10 +10,10 @@ $(function(){ $(document).foundation();
       $('.notice').fadeOut();
     }, 3500);
 
-});
+    $('#upload-load').hide();
+    $('.tuts-submit').on('click', function(){
+      $(this).hide();
+      $('#upload-load').show();
+    });
 
-$('#upload-load').hide();
-$('.tuts-submit').on('click', function(){
-  $(this).hide();
-  $('#upload-load').show();
 });
