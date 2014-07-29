@@ -1,6 +1,6 @@
 class Tutorial < ActiveRecord::Base
   include Elasticsearch::Model
-  include Elasticsearch::Model::Callbacks
+  #include Elasticsearch::Model::Callbacks
 
   mapping do
     indexes :title, type: 'string', analyzer: 'simple' #, fuzziness: 2, completion: 'suggest'
