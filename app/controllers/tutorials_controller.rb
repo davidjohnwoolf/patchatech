@@ -2,6 +2,7 @@ class TutorialsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create]
   before_action :find_tutorial, only: [:update, :edit, :destroy, :show]
   before_action :check_tutorial_user, only: [:edit, :update, :destroy]
+  before_action :rate_create, only: [:rate_up, :rate_down]
 
 
     def index
@@ -47,8 +48,6 @@ class TutorialsController < ApplicationController
     # --------- Start Rating Methods --------- #
 
     def rate_up
-      @tutorial = Tutorial.find(params[:tutorial_id])
-      @user = User.find(@tutorial.user_id)
       @tutorial.rating += 1
       @tutorial.user_rated_will_change!
       @tutorial.user_rated << current_user.id.to_s
@@ -57,8 +56,6 @@ class TutorialsController < ApplicationController
     end
 
     def rate_down
-      @tutorial = Tutorial.find(params[:tutorial_id])
-      @user = User.find(@tutorial.user_id)
       @tutorial.rating -= 1
       @tutorial.user_rated_will_change!
       @tutorial.user_rated << current_user.id.to_s
@@ -81,5 +78,10 @@ class TutorialsController < ApplicationController
 
     def find_tutorial
       @tutorial = Tutorial.find(params[:id])
+    end
+
+    def rate_create
+      @tutorial = Tutorial.find(params[:tutorial_id])
+      @user = User.find(@tutorial.user_id)
     end
 end
