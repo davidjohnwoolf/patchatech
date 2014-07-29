@@ -2,8 +2,6 @@ class Tutorial < ActiveRecord::Base
   include Elasticsearch::Model
   include Elasticsearch::Model::Callbacks
 
-  attr_accessor :cover_photo
-
   mapping do
     indexes :title, type: 'string', analyzer: 'simple' #, fuzziness: 2, completion: 'suggest'
     indexes :description
@@ -29,9 +27,9 @@ class Tutorial < ActiveRecord::Base
       response
   end
 
-  def cover_photo_changed?
-    changed.include?("cover_photo")
-  end
+  # def cover_photo_changed?
+  #   changed.include?("cover_photo")
+  # end
 
   def as_indexed_json(opts={})
     as_json(

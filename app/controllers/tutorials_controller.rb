@@ -32,7 +32,7 @@ class TutorialsController < ApplicationController
     end
 
     def update
-      if @tutorial.update_attributes(tutorial_params)
+      if @tutorial.update(tutorial_params)
         redirect_to user_path(current_user.id)
       else
         render :edit
