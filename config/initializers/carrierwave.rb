@@ -12,5 +12,5 @@ CarrierWave.configure do |config|
       access_key_id:     ENV['AWS_ACCESS_KEY_ID'],
       secret_access_key: ENV['AWS_SECRET_ACCESS_KEY']
     }
-    config.remove_previously_stored_files_after_update = true
+    config.remove_previously_stored_files_after_update = false
 end
