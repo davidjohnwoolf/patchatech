@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.1.2'
 
-gem 'rails', '4.1.1'
+gem 'rails', '4.1.4'
 
 #Application Gems
 gem 'carrierwave'
@@ -14,6 +14,7 @@ gem 'jquery-rails'
 gem 'kaminari' #pagination
 gem 'mini_magick'
 gem 'pg'
+gem 'pry-rails'
 gem 'thin'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
@@ -28,7 +29,6 @@ gem 'videojs_rails'
 
 #Development Gems
 group :development do
-  gem 'pry-rails'
   gem 'spring'
 end
 

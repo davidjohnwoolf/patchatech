@@ -6,7 +6,7 @@ class Tutorial < ActiveRecord::Base
   #   indexes :title, type: 'string', analyzer: 'simple' #, fuzziness: 2, completion: 'suggest'
   #   indexes :description
   # end
-  validates :user_id, :title, :description, :category, presence: true
+  # validates :user_id, :title, :description, :category, presence: true
   mount_uploader :cover_photo, CoverPhotoUploader
   # mount_uploader :video, TutorialVideoUploader
 
