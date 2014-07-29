@@ -2,14 +2,20 @@ class Tutorial < ActiveRecord::Base
   include Elasticsearch::Model
   include Elasticsearch::Model::Callbacks
 
+  attr_accessor :cover_photo
+
   mapping do
     indexes :title, type: 'string', analyzer: 'simple' #, fuzziness: 2, completion: 'suggest'
     indexes :description
   end
-  belongs_to :user
   validates :user_id, :title, :description, :category, :video, presence: true
   mount_uploader :cover_photo, CoverPhotoUploader
   mount_uploader :video, TutorialVideoUploader
+
+  belongs_to :user
+  # def cover_photo_changed!
+  #
+  # end
 
   def self.search(params, options={})
      es = __elasticsearch__
@@ -26,14 +32,22 @@ class Tutorial < ActiveRecord::Base
       response
   end
 
+  def cover_photo_changed?
+    changed.include?("cover_photo")
+  end
+
   def as_indexed_json(opts={})
     as_json(
       only: [
         :title,
         :description,
-        :category
+        :category,
+        :created_at,
+        :rating
       ],
       methods: [
+        :created_at,
+        :rating,
         :cover_photo,
         :video,
         :video_duration

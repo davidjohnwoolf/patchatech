@@ -22,12 +22,8 @@ class TutorialsController < ApplicationController
       @tutorial = Tutorial.new(tutorial_params)
       @tutorial.user_id = current_user.id
       @tutorial.title.capitalize!
-      #if @tutorial.valid?
-        #movie = FFMPEG::Movie.new(@tutorial.video.file.file)
-        #@tutorial.video_duration = Time.at(movie.duration).strftime('%M:%S')
       if @tutorial.save
         redirect_to user_path(current_user.id)
-      #  end
       else
         render :new
       end
