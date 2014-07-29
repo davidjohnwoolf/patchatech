@@ -23,6 +23,14 @@ video {
   margin: -5px 10px 0 0;
 }
 
+.video-info input[value="Rate Up"]:hover {
+  background-color: green;
+}
+
+.video-info input[value="Rate Down"]:hover {
+  background-color: #d40000;
+}
+
 .rated {
   font-style: italic;
   color: #999;
