@@ -68,7 +68,7 @@ RSpec.describe TutorialsController, :type => :controller do
 
     context 'when the record fails to save' do
       it 'renders the new template and does not save to the db' do
-        post :create, tutorial: {title: nil}
+        post :create, tutorial: { title: 'test', description: 'asdf', category: nil, video: nil }
         expect(response).to render_template("new")
         expect(Tutorial.count).to eq 0
       end
