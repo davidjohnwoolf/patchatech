@@ -41,9 +41,13 @@ class Tutorial < ActiveRecord::Base
       only: [
         :title,
         :description,
-        :category
+        :category,
+        :created_at,
+        :rating
       ],
       methods: [
+        :created_at,
+        :rating,
         :cover_photo,
         :video,
         :video_duration
