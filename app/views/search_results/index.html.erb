@@ -5,16 +5,10 @@
       <% @results.results.each do |result| %>
         <li>
           <a href="<%= tutorial_path(result.id) %>">
-          <div class="tile-title">
-            <h5 class="bold truncate"><%= result.title %></h5>            
-            <% if result.rating > 0 %>
-              <div class="green">Rating <%= result.rating %></div>
-            <% elsif result.rating < 0 %>
-              <div class="red">Rating <%= result.rating %></div>
-            <% else %>
-              <div>Rating <%= result.rating %></div>
-            <% end %>
-          </div>
+            <%= image_tag(result.cover_photo.cover_photo.thumb.url) %>
+            <div class="tile-title">
+              <h5 class="bold truncate"><%= result.title %></h5>
+            </div>
           </a>
         </li>
       <% end %>
