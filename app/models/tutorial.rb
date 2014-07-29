@@ -13,9 +13,6 @@ class Tutorial < ActiveRecord::Base
   mount_uploader :video, TutorialVideoUploader
 
   belongs_to :user
-  # def cover_photo_changed!
-  #
-  # end
 
   def self.search(params, options={})
      es = __elasticsearch__

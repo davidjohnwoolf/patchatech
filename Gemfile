@@ -4,13 +4,15 @@ ruby '2.1.2'
 gem 'rails', '4.1.1'
 
 #Application Gems
-gem 'carrierwave-aws'
+gem 'carrierwave'
 gem 'coffee-rails', '~> 4.0.0'
-gem 'elasticsearch-model'
 gem 'devise'
+gem 'elasticsearch-model'
+gem 'fog'
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
 gem 'kaminari' #pagination
+gem 'mini_magick'
 gem 'pg'
 gem 'thin'
 gem 'turbolinks'
@@ -22,9 +24,6 @@ gem 'sass-rails', '~> 4.0.3'
 gem 'font-awesome-sass'
 
 #Video/Photo Gems
-gem 'mini_magick'
-gem 'carrierwave'
-gem 'carrierwave-video'
 gem 'videojs_rails'
 
 #Development Gems
