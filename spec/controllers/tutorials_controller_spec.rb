@@ -61,7 +61,7 @@ RSpec.describe TutorialsController, :type => :controller do
     context 'when saving a proper record' do
       it 'creates a new tutorial and saves it to the db' do
         expect {
-        post :create, tutorial: {id: 1, title: 'test', description: 'asdf', video: 'public/uploads/video/5/Responsive_Web_Design_with_Foundation_-_1.1._Introduction.mp4'}
+        create(:tutorial, user: @user)
       }.to change(Tutorial, :count).by(1)
       end
     end
