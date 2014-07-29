@@ -8,7 +8,7 @@ class Tutorial < ActiveRecord::Base
   end
   validates :user_id, :title, :description, :category, :video, presence: true
   mount_uploader :cover_photo, CoverPhotoUploader
-  mount_uploader :video, TutorialVideoUploader
+  # mount_uploader :video, TutorialVideoUploader
 
   belongs_to :user
 

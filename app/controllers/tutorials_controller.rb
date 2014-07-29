@@ -18,8 +18,7 @@ class TutorialsController < ApplicationController
     end
 
     def create
-      @tutorial = Tutorial.new(tutorial_params)
-      @tutorial.user_id = current_user.id
+      @tutorial = current_user.tutorials.build(tutorial_params)
       @tutorial.title.capitalize!
       if @tutorial.save
         redirect_to user_path(current_user.id)
