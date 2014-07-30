@@ -36,7 +36,7 @@
     <% end %>
 
     <div>
-      <br><p id="cancel-text">Unhappy? We'll be sad to see you go, but you can cancel your account at anytime.<%= button_to "Cancel my account", cancel_user_registration_path, data: { confirm: "Are you sure?" }, method: :delete %></p>
+      <br><p id="cancel-text">Unhappy? We'll be sad to see you go, but you can cancel your account at anytime.<%= button_to "Cancel my account", cancel_user_registration_path, data: { confirm: "Are you sure?" }, method: :delete, class: 'cancel-button' %></p>
     </div>
 
     <%= link_to "Back", user_path(current_user.id)%>
