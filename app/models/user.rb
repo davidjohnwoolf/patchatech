@@ -12,4 +12,8 @@ class User < ActiveRecord::Base
 
   has_many :tutorials
 
+  def to_param
+    [id, username.parameterize].join("-")
+  end
+
 end
