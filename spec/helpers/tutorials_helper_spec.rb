@@ -11,5 +11,21 @@ require 'rails_helper'
 #   end
 # end
 RSpec.describe TutorialsHelper, :type => :helper do
-  pending "add some examples to (or delete) #{__FILE__}"
+  before do
+    @tutorial = create(:tutorial)
+    @user = create(:user)
+
+  end
+  describe 'check if user rated' do
+    context 'the user has rated' do
+      it 'checks user_rated attribute and sees that it contains the user id' do
+
+      end
+    end
+    context 'the user has not rated' do
+      it 'checks user_rated attribute and sees that it does not contain the user id' do
+        
+      end
+    end
+  end
 end
