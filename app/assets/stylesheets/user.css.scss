@@ -46,8 +46,14 @@ ul {
   background-color: #d40000;
 }
 
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 42em) {
   .tutorial-option {
     width: auto;
+  }
+}
+
+@media only screen and (max-width: 20em) {
+  .tutorial-option {
+    width: 65px;
   }
 }
