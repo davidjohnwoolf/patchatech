@@ -27,7 +27,7 @@
       <% if signed_in? %>
 
         <ul class="right">
-          <li><a href="<%= user_path(current_user.id) %>"><%= current_user.username %></a></li>
+          <li><a href="<%= user_path(current_user) %>"><%= current_user.username %></a></li>
           <li class="divider"></li>
           <li class="has-dropdown">
             <a id="dropdown-button" href="#">options</a>

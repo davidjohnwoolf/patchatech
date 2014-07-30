@@ -184,6 +184,11 @@ footer #social-media img.last-item {
   text-decoration: underline;
 }
 
+.disclaimer {
+  font-size: 0.7em;
+  font-style: italic;
+}
+
 /* Misc Classes*/
 
 .last-item {
