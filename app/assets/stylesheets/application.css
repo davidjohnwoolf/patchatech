@@ -53,7 +53,16 @@ h1 {
 }
 
 .cancel-button {
-  background-color: red;
+  background-color: #fff;
+  color: #999;
+  border: none;
+  padding: 0;
+  font-size: 1em;
+}
+
+.cancel-button:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 /* Flash Styles */
