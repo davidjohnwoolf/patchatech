@@ -1,6 +1,6 @@
 PATCHATECH
 
-PatchaTech was conceived as a capstone project by three students of DevPoint Labs. The idea was simple: create a website that fills the need for free, peer-submitted and reviewed tutorials that tackle common issues with today's modern devices. By making PatchaTech your go-to site for gaining new knowledge and skills, you'll end up saving a fistful of dollars (and more than a few headeaches!) fixing your devices yourself.
+PatchaTech was conceived by three students of DevPoint Labs. The idea was simple: create a website that fills the need for free, peer-submitted and reviewed tutorials that tackle common issues with today's modern devices. By making PatchaTech your go-to site for gaining new knowledge and skills, you'll end up saving a fistful of dollars (and more than a few headeaches!) fixing your devices yourself.
 
 Technologies used:
 
